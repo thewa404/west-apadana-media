@@ -23,9 +23,9 @@
     "autoPublish": false
   },
   "batch_default": {
-    "reel": 2,
+    "reel": 3,
     "carousel": 3,
-    "showcase": 2,
+    "showcase": 1,
     "graphic": 2,
     "story": 1
   },
@@ -69,5 +69,44 @@
     "all_framer_projects_are": "concept/demo (owner confirmed 2026-11-03)",
     "marketing_use": "allowed",
     "never_imply": "that any of them was commissioned by a real client"
-  }
+  },
+  "ground_mix": {
+    "education": 0.7,
+    "demonstration": 0.2,
+    "story": 0.1,
+    "status": "starting hypothesis, adjust on performance; not a limit",
+    "first_test": {
+      "education": 14,
+      "demonstration": 4,
+      "story": 2
+    }
+  },
+  "grounds": [
+    "education",
+    "demonstration",
+    "story"
+  ],
+  "content_rules": {
+    "no_pitch_in_pieces": true,
+    "offers_live_on": [
+      "profiles",
+      "landing page"
+    ],
+    "allowed_endings": [
+      "save",
+      "share",
+      "question",
+      "occasional follow invitation"
+    ],
+    "lint": "wa_cli.py pitch-lint / pitch-lint-pieces / calendar-check",
+    "third_party_analysis": "publicly accessible, verifiable, fair, sourced with URL and capture date; no invented performance data; never imply a company hired us",
+    "voiceover": "none until the owner approves a voice after listening to the test",
+    "calendar": "content/calendar.json"
+  },
+  "volume": {
+    "free_plan_cap": 20,
+    "reserve_slots_per_month": 2,
+    "not_a_ceiling": "20 pieces is the first test only; Metricool Starter is under consideration (owner decision pending)"
+  },
+  "batch_default_note": "Default 10-piece batch is education-first: 7 education, 2 demonstration, 1 story (70/20/10). Formats: 3 reels, 3 carousels, 1 showcase, 2 graphics, 1 story carousel. Network allocation unchanged: 20 network-posts."
 }

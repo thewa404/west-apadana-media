@@ -1,6 +1,6 @@
 {
- "version": "0.1.0",
- "status": "DRAFT for owner approval. Nothing here has been applied to any live profile.",
+ "version": "0.2.0",
+ "status": "DRAFT for owner approval. Revised after owner review 2026-11-03 (education, authority and premium positioning first; offers secondary; existing logo only). Nothing here has been applied to any live profile.",
  "updated": "2026-11-03",
  "foundation": {
   "studio": "West Apadana, an independent digital design studio creating premium websites and distinctive digital experiences.",
@@ -9,9 +9,7 @@
   "real_services": [
    "Premium website design",
    "Distinctive digital experiences",
-   "Free homepage review (CHECK): concise review that identifies three improvement opportunities",
-   "Free initial website improvement assessment (REBUILD): an assessment, not a promise of a redesign",
-   "Project conversation (BRIEF): an invitation to discuss a potential website project"
+   "Optional offers (secondary, link destination only): free homepage review (CHECK), free initial website improvement assessment (REBUILD, not a promise of a redesign), project conversation (BRIEF)"
   ],
   "education_topics": [
    "websites",
@@ -33,7 +31,24 @@
    "Marketing, SEO, branding or AI-automation as a SERVICE (only as lesson topics) until the owner confirms",
    "That portfolio pieces are client work. They are concept projects."
   ],
-  "voice": "Confident, precise, warm. Short sentences. No exclamation marks. No 'unlock', 'game-changer', 'elevate your brand'. No emoji in bios."
+  "voice": "Confident, precise, warm. Short sentences. No exclamation marks. No 'unlock', 'game-changer', 'elevate your brand'. No emoji in bios.",
+  "positioning": "West Apadana builds premium websites and teaches how websites, brand and conversion work. People should follow for lessons they can use the same day, and understand within one line that the studio builds premium websites.",
+  "profile_message_order": [
+   "1. What we teach (lessons that can be used the same day)",
+   "2. What we build (premium websites and digital experiences)",
+   "3. Proof of seriousness (concept work, always labeled)",
+   "4. Optional ways to start (secondary, link destination or long About only)"
+  ],
+  "offers_policy": "CHECK, REBUILD and BRIEF are optional offers reachable from the link destination or a landing page. They are never the main message of a profile and never appear inside educational posts. Short bios (Instagram, Threads, X, Facebook intro, LinkedIn tagline and headline) carry no offer.",
+  "logo": {
+   "status": "MISSING ASSET (not located)",
+   "rule": "Use the existing approved West Apadana logo. Do not design, invent or substitute a monogram or any new mark without owner approval.",
+   "searched": [
+    "repo (no logo file; assets hold portfolio.json, screenshots and textures)",
+    "Google Drive (no logo, brand or West Apadana file found)"
+   ],
+   "candidate_unconfirmed": "Metricool holds a brand logo uploaded Aug 2026 (https://static.metricool.com/brand-logo/202608/6728476-file-3671512345440253977.jpeg). It has not been confirmed as the approved logo. If it is, the owner should supply the original file (or confirm it) so the repo has the source."
+  }
  },
  "limits": {
   "instagram": {
@@ -120,22 +135,22 @@
    "title": "Instagram",
    "purpose": "Discovery and proof. Visitors arrive from Reels and carousels, scan in about three seconds, and decide whether to follow or enquire.",
    "recommended": "C",
-   "why": "Reels bring cold visitors. Line one says what we do, line two gives one concrete next step, line three gives a reason to follow. It keeps the premium tone and puts the offer where promotion belongs: the profile, not the posts.",
+   "why": "Reels bring cold visitors who decide in seconds whether to follow. Line one gives the reason to follow (lessons), line two says plainly that we build premium websites, line three signals honesty about concept work. The offer sits one tap away on the link destination, not in the bio.",
    "options": {
     "A": {
      "label": "Premium / minimal",
      "display_name": "West Apadana",
-     "bio": "Independent digital design studio.\nPremium websites and digital experiences.\nLessons on web, brand and conversion."
+     "bio": "Independent digital design studio.\nPremium websites and digital experiences.\nLessons on web, brand and growth."
     },
     "B": {
      "label": "Bold / creative",
      "display_name": "West Apadana | Websites",
-     "bio": "Your homepage has one job.\nWe design websites that do it.\nLessons and concept work."
+     "bio": "Your homepage has one job.\nLessons on making it do it.\nWe build premium websites."
     },
     "C": {
-     "label": "Professional / conversion",
+     "label": "Education-led / authority",
      "display_name": "West Apadana | Web Design",
-     "bio": "Premium websites and digital experiences.\nFree homepage review: three things we'd improve.\nLessons on web, brand and conversion."
+     "bio": "Practical lessons on websites, brand and conversion.\nIndependent studio building premium websites.\nConcept work, always labeled."
     }
    },
    "keywords": [
@@ -147,26 +162,26 @@
     "Framer"
    ],
    "keyword_placement": "Put the primary keyword in the NAME field (it is searchable). Keep the bio for the human reader.",
-   "cta": "Free homepage review (link). No response time promised.",
+   "cta": "Follow for lessons. The bio link opens a start page: lessons first, optional ways to work with us below.",
    "links": [
-    "1. Inquiry destination (UTM: instagram)",
+    "1. Start page (UTM: instagram). Lessons and concept work first; optional ways to start below.",
     "2. Concept work (optional second link; Instagram may allow several links, verify in editor)"
    ],
-   "link_strategy": "One destination that does one job: request the free homepage review, with the other two paths (assessment, project conversation) one tap below. Tag the link with UTM parameters so profile visits can be traced. Add a second link to the concept portfolio only if the editor allows more than one.",
+   "link_strategy": "One destination that does two jobs in order: show the best lessons and concept work, then offer the optional ways to start (homepage review, website improvement assessment, project conversation). Tag the link with UTM parameters so profile visits can be traced. Add a second link to the concept portfolio only if the editor allows more than one.",
    "category_label": "Pick the closest professional category offered (for example a web or graphic design option). Verify the list in the editor.",
-   "photo": "Profile mark, square source 1080x1080, displayed as a circle (about 110 px on phones). Keep the mark inside the central 70%.",
-   "banner": "Instagram has no banner. Use 4 Highlight covers on obsidian with a gold line icon: Start here, Lessons, Concepts, Free review. Pin three grid posts once published.",
+   "photo": "The existing approved West Apadana logo (MISSING ASSET until supplied or confirmed). Source: square source 1080x1080, displayed as a circle (about 110 px on phones). Keep the mark inside the central 70%.",
+   "banner": "Instagram has no banner. Use 4 Highlight covers on obsidian with a gold line icon: Start here, Lessons, Concepts, Ways to start. Pin three grid posts once published (lessons first).",
    "extras": [
     "Switch to a Professional account (Business or Creator) linked to the Facebook Page. Needed for contact buttons, insights and Metricool auto-publish (untested).",
     "Contact button: email, only if the owner approves a public address.",
-    "Highlights: Start here, Lessons, Concepts, Free review."
+    "Highlights: Start here, Lessons, Concepts, Ways to start."
    ]
   },
   "threads": {
    "title": "Threads",
    "purpose": "Conversation and short-form lessons. Threads is tied to the Instagram account, so the bio must work on both.",
-   "recommended": "B",
-   "why": "Threads rewards a voice more than a pitch. If the Threads bio turns out to be synced from Instagram (sources disagree), accept Instagram's recommended bio instead and skip this one.",
+   "recommended": "C",
+   "why": "Threads rewards a plain voice. Lead with the lessons and state once that we build premium websites. If the Threads bio turns out to be synced from Instagram (sources disagree), accept Instagram's recommended bio and skip this one.",
    "options": {
     "A": {
      "label": "Premium / minimal",
@@ -176,12 +191,12 @@
     "B": {
      "label": "Bold / creative",
      "display_name": "West Apadana",
-     "bio": "Websites that say the thing. Notes on web design, branding and conversion from an independent studio."
+     "bio": "Plain-spoken notes on web design, branding and conversion. We build premium websites."
     },
     "C": {
-     "label": "Professional / conversion",
+     "label": "Education-led / authority",
      "display_name": "West Apadana",
-     "bio": "Premium websites and digital experiences. Notes on web, brand and conversion. Free homepage review: link below."
+     "bio": "Practical lessons on websites, branding and conversion. Independent studio building premium websites."
     }
    },
    "keywords": [
@@ -191,12 +206,12 @@
     "websites"
    ],
    "keyword_placement": "Threads has profile topic tags according to some sources. Verify in the app; if offered use: Web design, Branding, Marketing.",
-   "cta": "Free homepage review (link).",
+   "cta": "Follow for lessons. Link to the start page.",
    "links": [
-    "1. Inquiry destination (UTM: threads)"
+    "1. Start page (UTM: threads)"
    ],
    "link_strategy": "Same destination as Instagram with its own UTM source so we can compare the two.",
-   "photo": "Same profile mark as Instagram (Threads uses the Instagram photo according to sources).",
+   "photo": "The existing approved West Apadana logo (MISSING ASSET until supplied or confirmed). Same profile mark as Instagram (Threads uses the Instagram photo according to sources).",
    "banner": "None.",
    "extras": [
     "Confirm in the app whether the bio is editable separately from Instagram."
@@ -206,7 +221,7 @@
    "title": "Facebook Page",
    "purpose": "Credibility and a findable business listing. Owners vet a studio here before they message. It must look finished and say exactly what we do.",
    "recommended": "C",
-   "why": "Facebook visitors are comparing businesses. A plain, specific description and a visible message button convert better than atmosphere.",
+   "why": "Facebook visitors are comparing businesses. A plain, specific description says what we teach and what we build; the message button and the start page carry the optional offers.",
    "options": {
     "A": {
      "label": "Premium / minimal",
@@ -217,17 +232,17 @@
     "B": {
      "label": "Bold / creative",
      "page_name": "West Apadana | Premium Websites",
-     "intro": "Your homepage has one job. We design websites that do it.",
+     "intro": "Your homepage has one job. Lessons on making it do it.",
      "description": "West Apadana is an independent digital design studio. We design premium websites that tell a stranger what you do, why to trust you and what to do next, and we share the thinking behind them. Concept projects are labeled as such."
     },
     "C": {
-     "label": "Professional / conversion",
+     "label": "Education-led / authority",
      "page_name": "West Apadana | Web Design Studio",
-     "intro": "Premium websites and digital experiences. Free homepage review available.",
-     "description": "Independent digital design studio for premium websites and digital experiences. Lessons on websites, branding and conversion. Free homepage review: three improvements we'd make. Message us or use the website link."
+     "intro": "Practical lessons on websites and branding. We build premium websites.",
+     "description": "Independent digital design studio building premium websites and distinctive digital experiences. We share practical lessons on websites, branding and conversion, and show concept projects, always labeled as concepts."
     }
    },
-   "long_about": "West Apadana is an independent digital design studio. We design premium websites and distinctive digital experiences for businesses that want their first impression to match the quality of their work.\n\nWhat we share: lessons on websites, branding and conversion, written for business owners and made to be used the same day.\n\nWhat we show: concept projects. Our portfolio pieces are concepts we designed ourselves, not client work, and we label them that way every time.\n\nWays to start:\n- Homepage review (free): a concise review of your homepage that names three improvements.\n- Website improvement assessment (free): an initial look at what could be improved on your site. It is an assessment, not a promise of a redesign.\n- Project conversation: tell us about a website you are considering and we will talk it through.\n\nEvery inquiry is handled personally by the founder.",
+   "long_about": "West Apadana is an independent digital design studio. We build premium websites and distinctive digital experiences for businesses that want their first impression to match the quality of their work.\n\nWhat we share: practical lessons on websites, branding and conversion, written for business owners and made to be used the same day.\n\nWhat we show: concept projects. Our portfolio pieces are concepts we designed ourselves, not client work, and we label them that way every time.\n\nIf you would like to work with us, there are three optional ways to start:\n- Homepage review (free): a concise review of your homepage that names three improvements.\n- Website improvement assessment (free): an initial look at what could be improved on your site. It is an assessment, not a promise of a redesign.\n- Project conversation: tell us about a website you are considering and we will talk it through.\n\nEvery inquiry is handled personally by the founder.",
    "keywords": [
     "web design",
     "website design",
@@ -236,12 +251,12 @@
     "homepage review"
    ],
    "keyword_placement": "Page name suffix, intro and the first sentence of the description are what Facebook search reads. Category: pick the closest web or design option.",
-   "cta": "Action button: 'Send message' (owner handles) or 'Learn more' to the inquiry page. Prefer whichever the owner can answer personally.",
+   "cta": "Action button: 'Send message' (owner handles) or 'Learn more' to the start page. Prefer whichever the owner can answer personally.",
    "links": [
-    "Website: inquiry destination (UTM: facebook)"
+    "Website: start page (UTM: facebook)"
    ],
-   "link_strategy": "Website field plus the action button both go to the inquiry destination. Messenger is optional; if enabled, Facebook may show its own average-response badge. We cannot control that, and no response time is promised in copy.",
-   "photo": "Same profile mark as Instagram. Facebook displays it small (about 170 px on desktop) and circular.",
+   "link_strategy": "Website field plus the action button both go to the start page. Messenger is optional; if enabled, Facebook may show its own average-response badge. We cannot control that, and no response time is promised in copy.",
+   "photo": "The existing approved West Apadana logo (MISSING ASSET until supplied or confirmed). Same profile mark as Instagram. Facebook displays it small (about 170 px on desktop) and circular.",
    "banner": "Cover about 820x312 on desktop and 640x360 on phones. Design a 1640x624 source with all text inside the central 640x312 safe zone. Verify the current crop in the editor.",
    "extras": [
     "Username/URL: facebook.com/thewestapadana if available.",
@@ -254,8 +269,8 @@
   "x": {
    "title": "X",
    "purpose": "Short ideas and a credible front door. X and LinkedIn are not connected to Metricool, so these profiles are static until someone posts there.",
-   "recommended": "B",
-   "why": "X rewards a distinct point of view. Bold copy is also the easiest to keep honest in 160 characters. The link in the website field does the converting.",
+   "recommended": "C",
+   "why": "X rewards a clear point of view. Option C states the teaching and the trade in one line each, within 160 characters, and leaves the website field to do the rest.",
    "options": {
     "A": {
      "label": "Premium / minimal",
@@ -265,12 +280,12 @@
     "B": {
      "label": "Bold / creative",
      "display_name": "West Apadana | Websites",
-     "bio": "Your homepage has one job. We design websites that do it. Notes on web design, branding and conversion. Concepts are labeled concepts."
+     "bio": "Your homepage has one job. Lessons on making it do it, from an independent studio that builds premium websites."
     },
     "C": {
-     "label": "Professional / conversion",
-     "display_name": "West Apadana | Web Design Studio",
-     "bio": "Premium websites and digital experiences. Notes on web design, branding and conversion. Free homepage review: link below."
+     "label": "Education-led / authority",
+     "display_name": "West Apadana",
+     "bio": "Practical lessons on websites, branding and conversion. Independent studio building premium websites. Concepts are labeled concepts."
     }
    },
    "keywords": [
@@ -281,12 +296,12 @@
     "homepage"
    ],
    "keyword_placement": "Display name and bio are searchable. Handle is limited to 15 characters: @thewestapadana is 14 if available (not verified).",
-   "cta": "Website field only. No call to action in the bio on option B.",
+   "cta": "Website field only. No call to action in the bio.",
    "links": [
-    "Website field: inquiry destination (UTM: x)"
+    "Website field: start page (UTM: x)"
    ],
    "link_strategy": "One link in the website field. Pin the best lesson once published. Leave location empty unless a location is approved.",
-   "photo": "Same profile mark. X recommends 400x400 (official).",
+   "photo": "The existing approved West Apadana logo (MISSING ASSET until supplied or confirmed). Same profile mark. X recommends 400x400 (official).",
    "banner": "Header 1500x500 (official). Keep text inside the central 1100x300 so the avatar and crops do not cover it.",
    "extras": [
     "Confirm the handle is held by the owner.",
@@ -297,7 +312,7 @@
    "title": "LinkedIn Company Page",
    "purpose": "Professional legitimacy for people who check a company before replying. It also indexes well in search for the studio name.",
    "recommended": "C",
-   "why": "A buyer arrives here to confirm we are real and specific. Plain description, clear scope, honest labeling of concept work.",
+   "why": "A buyer arrives here to confirm we are real and specific. The tagline says what we build and what we teach; the About field explains scope and labels concept work honestly, and mentions optional ways to start only after that.",
    "options": {
     "A": {
      "label": "Premium / minimal",
@@ -309,13 +324,13 @@
      "label": "Bold / creative",
      "name": "West Apadana",
      "tagline": "Your homepage has one job. We design websites that do it.",
-     "about": "A homepage has one job: tell a stranger what this is, whether it is for them, why to trust it and what to do next.\n\nWest Apadana is an independent digital design studio. We design premium websites and distinctive digital experiences that do that job well, and we teach the thinking behind them.\n\nOur portfolio is concept work, labeled as such. It is not client work.\n\nA free homepage review and a free website improvement assessment are available through the website link on this page."
+     "about": "A homepage has one job: tell a stranger what this is, whether it is for them, why to trust it and what to do next.\n\nWest Apadana is an independent digital design studio. We build premium websites and distinctive digital experiences that do that job well, and we teach the thinking behind them.\n\nOur portfolio is concept work, labeled as such. It is not client work.\n\nOptional ways to start, through the website link on this page: a free homepage review or a free website improvement assessment."
     },
     "C": {
-     "label": "Professional / conversion",
+     "label": "Education-led / authority",
      "name": "West Apadana",
-     "tagline": "Independent digital design studio. Premium websites and digital experiences. Free homepage review available.",
-     "about": "West Apadana is an independent digital design studio. We design premium websites and distinctive digital experiences.\n\nWe also teach. We publish practical lessons on websites, branding, marketing, customer acquisition and conversion, written so a business owner can use them the same day.\n\nOur portfolio is concept work: projects we designed ourselves to explore ideas. They are labeled as concept projects and are not client work.\n\nWays to start:\n- Homepage review (free): a concise review that names three improvements.\n- Website improvement assessment (free): an initial look at what could be improved. It is an assessment, not a promise of a redesign.\n- Project conversation: an invitation to discuss a website you are considering.\n\nEvery inquiry is handled personally by the founder. Use the website link on this page to begin."
+     "tagline": "Independent studio building premium websites. Practical lessons on web, brand and conversion.",
+     "about": "West Apadana is an independent digital design studio. We build premium websites and distinctive digital experiences.\n\nWe also teach. We publish practical lessons on websites, branding, marketing, customer acquisition and conversion, written so a business owner can use them the same day.\n\nOur portfolio is concept work: projects we designed ourselves to explore ideas. They are labeled as concept projects and are not client work.\n\nIf you would like to work with us, there are optional ways to start:\n- Homepage review (free): a concise review that names three improvements.\n- Website improvement assessment (free): an initial look at what could be improved. It is an assessment, not a promise of a redesign.\n- Project conversation: an invitation to discuss a website you are considering.\n\nEvery inquiry is handled personally by the founder. The website link on this page is the place to begin."
     }
    },
    "specialties": [
@@ -336,24 +351,24 @@
     "Framer"
    ],
    "keyword_placement": "Specialties, tagline and the first two lines of About are what LinkedIn search and previews read.",
-   "cta": "Custom button: 'Visit website' to the inquiry destination (or 'Contact us' if offered).",
+   "cta": "Custom button: 'Visit website' to the start page.",
    "links": [
-    "Website: inquiry destination (UTM: linkedin_company)"
+    "Website: start page (UTM: linkedin_company)"
    ],
-   "link_strategy": "Website field and custom button both to the inquiry destination. Industry: Design Services (verify). Company size: choose the true option. Location: only if the owner approves one.",
-   "photo": "Square logo, 400x400 recommended (268x268 minimum), PNG or JPEG. Same mark as other platforms.",
+   "link_strategy": "Website field and custom button both to the start page. Industry: Design Services (verify). Company size: choose the true option. Location: only if the owner approves one.",
+   "photo": "The existing approved West Apadana logo, 400x400 recommended (268x268 minimum). Same logo as other platforms. MISSING ASSET until the owner supplies or confirms it.",
    "banner": "LinkedIn reportedly changed the Company Page cover size in mid-2026 (one source). Do not trust older 1128x191 guides. Confirm the size shown in the upload dialog, then design a very wide strip with text kept in the central safe zone and the bottom-left quarter quiet (the logo sits there).",
    "extras": [
     "Needs a personal LinkedIn account as admin.",
     "Not connected to Metricool. Posting there is manual or a later decision.",
-    "Cover should carry the tagline in DM Serif italic on obsidian with a gold rule."
+    "Cover carries the tagline in DM Serif italic on obsidian with a gold rule. No new logo or monogram."
    ]
   },
   "linkedin_founder": {
    "title": "LinkedIn personal profile (optional founder-brand strategy)",
    "purpose": "OPTIONAL. People buy from people, and LinkedIn is where a business owner will look up the person behind the studio. It must be a real person's profile, so this needs the founder's decision on name and photo.",
    "recommended": "C",
-   "why": "The Four Questions framework is our own idea, so the headline can carry it without borrowing credentials we do not have. No employers, years or results are claimed.",
+   "why": "Authority comes from the ideas, not borrowed credentials. The headline states the role and what is taught; the Four Questions framework is our own. No employers, years or results are claimed.",
    "options": {
     "A": {
      "label": "Premium / minimal",
@@ -366,9 +381,9 @@
      "about": "A homepage has one job. I design websites that do it, and I write about how.\n\nI run West Apadana, an independent digital design studio. Our portfolio is concept work, labeled as concept projects, not client work."
     },
     "C": {
-     "label": "Professional / conversion",
-     "headline": "Founder, West Apadana | Websites that answer: what is this, is it for me, can I trust it, what next? | Free homepage review",
-     "about": "I run West Apadana, an independent digital design studio. We design premium websites and distinctive digital experiences.\n\nWhat I post here is practical: how a homepage answers four questions in order (what is this, is it for me, can I trust it, what do I do next), how to review a site in ten minutes, how to write button labels people understand.\n\nOur portfolio is concept work. These are projects we designed ourselves, labeled as concept projects, not client work.\n\nIf you would like a second pair of eyes on your homepage, ask for the free homepage review. It names three things I would improve. If you are weighing a website project, I am glad to talk it through."
+     "label": "Education-led / authority",
+     "headline": "Founder, West Apadana | Independent studio building premium websites | Writing practical lessons on web, brand and conversion",
+     "about": "I run West Apadana, an independent digital design studio. We build premium websites and distinctive digital experiences.\n\nWhat I post here is practical: how a homepage answers four questions in order (what is this, is it for me, can I trust it, what do I do next), how to review a site in ten minutes, how to write button labels people understand.\n\nOur portfolio is concept work. These are projects we designed ourselves, labeled as concept projects, not client work.\n\nIf you are weighing a website project, I am glad to talk it through."
     }
    },
    "keywords": [
@@ -379,13 +394,13 @@
     "founder"
    ],
    "keyword_placement": "Headline first 60 to 70 characters show in search results, so lead with role and studio.",
-   "cta": "Featured section: inquiry destination first, then the Four Questions carousel and one concept project once published.",
+   "cta": "Featured section: the Four Questions carousel and one concept project once published, then the start page.",
    "links": [
-    "Contact info website: inquiry destination (UTM: linkedin_founder)",
+    "Contact info website: start page (UTM: linkedin_founder)",
     "Featured: lessons and concept pieces after publication"
    ],
    "link_strategy": "Link the personal profile to the Company Page as the current position. Never present concept projects as clients or employers.",
-   "photo": "Decision for the owner. A real portrait builds trust on LinkedIn but conflicts with a faceless brand. Alternative: the studio mark. Do not use a stock face or an AI-generated face.",
+   "photo": "The existing approved West Apadana logo (MISSING ASSET until supplied or confirmed). Decision for the owner. A real portrait builds trust on LinkedIn but conflicts with a faceless brand. Alternative: the studio mark. Do not use a stock face or an AI-generated face.",
    "banner": "1584x396. Same system as the other banners. Keep the left 25% quiet (the photo covers it) and keep text in the central safe zone.",
    "extras": [
     "Real name is required by LinkedIn. Placeholders for name and photo are pending.",
@@ -397,7 +412,7 @@
    "title": "YouTube",
    "purpose": "Search and shelf life. Shorts feed discovery now. The About page and playlists are what a curious viewer reads next.",
    "recommended": "C",
-   "why": "YouTube is the only channel here where the About text is searchable and read in full. Spend the length: topics, concept disclosure, offers, links.",
+   "why": "YouTube is the one channel here where the About text is searchable and read in full. Lead with the lessons and the topics; mention the studio, the concept-work disclosure and the optional offers after that.",
    "options": {
     "A": {
      "label": "Premium / minimal",
@@ -410,9 +425,9 @@
      "description": "Your homepage has one job. We design websites that do it, and we show the thinking.\n\nShort lessons on web design, branding and conversion from an independent studio. Concept projects in motion, labeled as concepts, not client work."
     },
     "C": {
-     "label": "Professional / conversion",
+     "label": "Education-led / authority",
      "channel_name": "West Apadana | Web Design Studio",
-     "description": "Independent digital design studio. We design premium websites and distinctive digital experiences, and we teach what we learn.\n\nWhat you will find here: short lessons on websites, branding, marketing, customer acquisition, conversion, AI tools and automation. Concept projects shown in motion. They are labeled as concept projects and are not client work.\n\nStart with a free homepage review: a concise review that names three improvements. Or ask for a free website improvement assessment, an initial look at what could be improved. It is an assessment, not a promise of a redesign. If you are weighing a website project, we are glad to talk it through.\n\nEvery inquiry is handled personally by the founder. Links below."
+     "description": "Short lessons on websites, branding, marketing, customer acquisition, conversion, AI tools and automation, from an independent studio that builds premium websites and distinctive digital experiences.\n\nWhat you will find here: practical lessons you can use the same day, and concept projects shown in motion. Concept projects are labeled and are not client work.\n\nIf you would like to work with us, there are optional ways to start: a free homepage review (a concise review that names three improvements), a free website improvement assessment (an initial look at what could be improved, not a promise of a redesign), or a conversation about a website project. Every inquiry is handled personally by the founder. Links below."
     }
    },
    "keywords": [
@@ -427,12 +442,12 @@
    "keyword_placement": "Channel name suffix, first 150 characters of the description and the channel keywords (Studio > Settings > Channel, if offered).",
    "cta": "Links below the description. Use the channel email field only if the owner approves a public address.",
    "links": [
-    "1. Free homepage review: inquiry destination (UTM: youtube)",
+    "1. Start page: lessons first, optional ways to start below (UTM: youtube)",
     "2. Concept work / portfolio",
     "3. Instagram"
    ],
-   "link_strategy": "Three labeled links. The banner shows links by default on desktop. Each Short's description repeats nothing salesy: education posts stay clean.",
-   "photo": "800x800 (recommended), shown as a circle. Same mark.",
+   "link_strategy": "Three labeled links. The banner shows links by default on desktop. Video and Short descriptions stay clean: education posts carry no offers.",
+   "photo": "The existing approved West Apadana logo, 800x800, shown as a circle. MISSING ASSET until the owner supplies or confirms it.",
    "banner": "2560x1440 source. Keep text and logo inside the central safe area (long-standing guidance: 1546x423). Verify in YouTube Studio's preview for TV, desktop and mobile.",
    "extras": [
     "Handle: confirm what @handle the channel holds.",
@@ -441,5 +456,9 @@
     "Shorts and videos need the made-for-kids setting."
    ]
   }
- }
+ },
+ "changelog": [
+  "0.2.0 (2026-11-03): recommended bios now lead with lessons and the premium-websites statement; free homepage review is no longer the main message of any profile (short bios carry no offer; long About fields mention optional ways to start after the first paragraph). Options A/B/C are now Premium-minimal / Bold-creative / Education-led authority. The invented monogram directions are removed; the existing approved logo is used and is currently a MISSING ASSET. Previous version kept at git tag kit-v0.1.0.",
+  "0.1.0 (2026-11-03): first draft."
+ ]
 }

@@ -1,20 +1,18 @@
 # Visual assets
 
-Not yet produced. The specifications below are for approval; the renderer (`scripts/wa/render.py`, brand tokens in `config/brand.json`) can generate every asset once the mark is decided.
+Not yet produced. The specifications below are for approval; the renderer (`scripts/wa/render.py`, brand tokens in `config/brand.json`) can generate banners and Highlight covers once the logo file is available.
 
-## One mark everywhere
-Consistency across platforms builds recognition. Use **one** profile mark on all seven profiles.
+## The logo: existing approved logo only
+Owner decision 2026-11-03: use the existing approved West Apadana logo. Do not invent a replacement monogram or rebrand without approval. The earlier "WA monogram" and "serif W" directions were removed from this kit.
 
-Open question: a logo may already exist (Metricool holds a brand logo uploaded in August 2026). It has not been reviewed in this session. If one exists, the plan is to keep it and build the banners around it. If not, two directions to choose between:
+**MISSING ASSET.** The original approved logo file has not been located:
+- Repo: no logo file (assets hold portfolio.json, screenshots and textures).
+- Google Drive: no logo, brand or West Apadana file found (searched 2026-11-03).
+- Metricool: holds a brand logo uploaded in August 2026 (`https://static.metricool.com/brand-logo/202608/6728476-file-3671512345440253977.jpeg`). It has never been reviewed here and nobody has confirmed it is the approved logo. The sandbox cannot fetch that host.
 
-| Direction | Description |
-|---|---|
-| 1. Monogram | "WA" in Inter Display Bold, champagne gold #C6A66A on obsidian #101010, tight tracking, generous margin |
-| 2. Serif W | A single "W" in DM Serif Display, gold on obsidian, with a thin gold rule beneath |
+What is needed: the owner confirms the Metricool logo is the approved one (Claude can then read it through the owner's built-in browser and store the source in the repo), or supplies the original file. Until then no profile image, banner or Highlight cover is produced.
 
-Obsidian text on champagne gold is also an approved pair, for a gold-ground alternate used on banners only.
-
-Rules: no gradients, no 3D effects, no tiny text. The mark must read at 40 px. Keep the mark inside the central 70% of the square so circular crops never cut it.
+One logo on all seven profiles. It must read at 40 px and sit inside the central 70% of the square so circular crops never cut it. Obsidian text on champagne gold is an approved pair, usable for a gold-ground alternate on banners only. No gradients, no 3D effects, no tiny text.
 
 ## Image specifications
 | Platform | Profile image | Banner / cover | Notes |
@@ -28,13 +26,13 @@ Rules: no gradients, no 3D effects, no tiny text. The mark must read at 40 px. K
 
 ## Banner design (one system, adapted per size)
 - Ground: obsidian #101010, with a very light grain (the existing `assets/textures/grain.png`).
-- One line in DM Serif Display italic, ivory #F2EDE4: "Premium websites and digital experiences." Optional second line in DM Mono: the handle.
+- The existing approved logo, plus one line in DM Serif Display italic, ivory #F2EDE4: "Premium websites and digital experiences." Optional second line in DM Mono: the handle.
 - A thin champagne-gold rule. No stock imagery, no screenshots that imply client work.
 - A concept strip variant (optional, later): one TORQ crop labeled "Concept project, not client work" at small size.
 - Contrast: ivory on obsidian and gold on obsidian are approved pairs in `brand-check`.
 
 ## Highlight covers (Instagram)
-Four covers: Start here, Lessons, Concepts, Free review. Obsidian ground, gold line icon, DM Mono label. 1080x1920 source, central circle only visible.
+Four covers: Start here, Lessons, Concepts, Ways to start. Obsidian ground, gold line icon, DM Mono label. 1080x1920 source, central circle only visible.
 
 ## Delivery
 Files would be rendered into `assets/social-identity/` in the repo (public). Nothing is uploaded to a platform by Claude: the owner uploads them, or approves a supervised browser-assisted attempt (`30-tool-capability.md`).

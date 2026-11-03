@@ -35,6 +35,18 @@ BANNED = [
     (r"\bagency\b|\bour team\b|\bteam of\b", "team/agency claim"),
 ]
 
+OFFER = re.compile(r"free (homepage )?(review|assessment|audit)|website improvement assessment|project conversation|\b(CHECK|REBUILD|BRIEF)\b|message us|dm us", re.I)
+SHORT_FIELDS = {"display_name", "page_name", "bio", "intro", "tagline", "headline", "channel_name", "name"}
+
+def offer_rules(pk, plat, field, text):
+    """Education-first identity rule (owner decision 2026-11-03): offers are never the main message."""
+    out = []
+    if field in SHORT_FIELDS and OFFER.search(text):
+        out.append("offer in a short field (offers belong on the link page or in long About text, after the first paragraph)")
+    if field in ("description", "about") and OFFER.search(text[:200]):
+        out.append("offer within the first 200 characters of a long field")
+    return out
+
 def load():
     return json.load(open(KIT, encoding="utf-8"))
 
@@ -61,10 +73,17 @@ def check(kit):
                 n = len(text)
                 limit = lims[lk][0]
                 status = "ok" if n <= limit else "OVER"
-                probs = lint(text)
+                probs = lint(text) + offer_rules(pk, plat, field, text)
+                if ok == plat["recommended"] and field in ("bio", "intro", "tagline", "headline", "description"):
+                    pass
                 if status != "ok" or probs:
                     bad += 1
                 rows.append((pk, ok, field, n, limit, status, "; ".join(probs)))
+        rec = plat["options"][plat["recommended"]]
+        joined = " ".join(str(v) for k, v in rec.items() if k != "label")
+        if not re.search(r"premium website", joined, re.I):
+            print("RECOMMENDED OPTION of", pk, "never says West Apadana builds premium websites")
+            bad += 1
         la = plat.get("long_about")
         if la:
             probs = lint(la)
@@ -123,7 +142,7 @@ def render(kit):
     # recommended set
     o = ["# Recommended set\n", banner,
          "One cohesive set, tuned to what each platform is for. Voice is the same everywhere: confident, precise, warm, no exclamation marks, no emoji. "
-         "The same three ideas recur so a visitor who meets us on two platforms recognizes us: premium websites and digital experiences, lessons that can be used the same day, and concept work that is always labeled.\n"]
+         "The same ideas recur, in this order, so a visitor who meets us on two platforms recognizes us: lessons that can be used the same day, premium websites and digital experiences, concept work that is always labeled, and only then the optional ways to start (never in a short bio). The logo is the existing approved West Apadana logo, currently a missing asset: no mark has been invented.\n"]
     for plat, rec in rec_rows:
         pk = [k for k, v in kit["platforms"].items() if v is plat][0]
         o.append("## %s: option %s (%s)\n" % (plat["title"], plat["recommended"], rec["label"]))

@@ -14,6 +14,10 @@
   shots-latest                        newest Framer screenshot files in this sandbox
   shots-ingest <src> <slug> "<title>" <project-id> [breakpoint]
   crops <image> [window_h]            candidate section offsets for screenshot crops/scroll stops
+  pitch-lint "<text>"                 flag promotional endings (education-first rule)
+  pitch-lint-pieces                   lint CTA field + closing paragraph of every built piece
+  calendar-render                     write docs/CALENDAR.md from content/calendar.json
+  calendar-check                      lint content/calendar.json: pitch rules, mix, monthly cap + reserve, duplicates
   record-draft <piece> <network> <draft_id> <uuid> [status] [planner_url]
 """
 import json
@@ -21,7 +25,7 @@ import pathlib
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from wa import brand, inventory, payload, publish, shots, verify  # noqa: E402
+from wa import brand, inventory, payload, pitch_lint, publish, shots, verify  # noqa: E402
 
 
 def main(a):
@@ -60,6 +64,14 @@ def main(a):
         out = shots.ingest(rest[0], rest[1], rest[2], rest[3], rest[4] if len(rest) > 4 else "Desktop")
     elif cmd == "crops":
         out = shots.candidate_offsets(rest[0], int(rest[1]) if len(rest) > 1 else 900)
+    elif cmd == "pitch-lint":
+        out = pitch_lint.lint_text(" ".join(rest)) or "clean"
+    elif cmd == "pitch-lint-pieces":
+        out = pitch_lint.lint_pieces()
+    elif cmd == "calendar-render":
+        out = pitch_lint.render_calendar()
+    elif cmd == "calendar-check":
+        out = pitch_lint.lint_calendar()
     elif cmd == "record-draft":
         out = inventory.record_draft(*rest[:4], *( [rest[4]] if len(rest) > 4 else []), *([rest[5]] if len(rest) > 5 else []))
     else:

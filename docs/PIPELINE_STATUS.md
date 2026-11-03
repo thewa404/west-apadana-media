@@ -1,6 +1,6 @@
 # Pipeline status
 
-Last updated: 2026-11-03 (sample-piece delivery and byte-exact Metricool hosting test added). Rule: nothing below is claimed beyond its evidence. Update this file whenever a test is run.
+Last updated: 2026-11-03 (education-first rules, pitch lint, revised calendar, voiceover test result added). Rule: nothing below is claimed beyond its evidence. Update this file whenever a test is run.
 
 ## VERIFIED
 | Capability | Evidence |
@@ -27,6 +27,18 @@ Last updated: 2026-11-03 (sample-piece delivery and byte-exact Metricool hosting
 
 | Profile editing by our tools (read-only investigation 2026-11-03) | CONFIRMED NOT AVAILABLE: the Metricool MCP has no profile-edit tool; no installed connector edits social profiles; the sandbox cannot read instagram.com or youtube.com. Details in `docs/social-identity/30-tool-capability.md`. |
 
+## Voiceover quality test (2026-11-03, limited, existing tools only)
+RESULT: **NOT ADOPTED. No voice that meets the premium bar is available with the tools in this environment.**
+- Available: the `flite` filter inside ffmpeg (three voices tried: slt, awb, kal16). It is a small rule-based synthesizer from the 2000s. A 28-word test line rendered in 8.8 to 9.8 s at -17 LUFS. It is intelligible, flat and robotic. It is not comparable to a professional voiceover and I did not treat it as a candidate; I kept the sample so the owner can hear the baseline.
+- Not available: neural voice engines (the Python and npm package registries were unreachable from this session, so none could be installed), and the optional ElevenLabs add-on tools are not connected. No new subscription was started.
+- Not verifiable by me: whether any voice sounds convincing. Audio quality is judged by ears; I measured loudness only. Any candidate voice must be listened to by the owner before adoption.
+- Decision for now: reels stay voiceless, with on-screen captions and original sound design. If a better engine is enabled later (a connected add-on or an installable local model), rerun this test against the premium bar: natural pacing, no clipped consonants, convincing emphasis, a brand-appropriate timbre, and compare with a human recording of the same script. If an AI voice is ever adopted, disclose it with the posting tool's AI flags (`isAiGenerated`, `isAiGeneratedContent`).
+- Sample for the owner (baseline only, not a candidate): `flite_slt.m4a`, delivered in chat. It is not committed to the public repo.
+
+## Pitch lint and calendar check (2026-11-03)
+Tested on the repo. `wa_cli.py pitch-lint`, `pitch-lint-pieces`, `calendar-check`. Checked: flags DM keywords, booking requests, free offers, contact/hire requests, link-in-bio pitches, scarcity and the offer names CHECK/REBUILD/BRIEF; passes save, share, questions and follow invitations. The three built sample pieces are clean (closing paragraphs and CTA fields). Known limit: it is a pattern match, so example copy for invented businesses ("Book a repair") must be reviewed by a person, and it cannot judge tone.
+`calendar-check` on `content/calendar.json`: no lint hits, 14/4/2 mix, 18 network-posts in November and 18 in December, no duplicate hooks or titles against history or within the calendar.
+
 ## UNTESTED (do not rely on these)
 1. **Actual publishing in either mode** (a successful draft or scheduling test does NOT prove this): manual delivery (push notification at the scheduled time) and automatic (`autoPublish: true`, API publish). Never run. The first real approved post must be monitored.
 2. Reverting a scheduled post back to a draft.
@@ -36,6 +48,8 @@ Last updated: 2026-11-03 (sample-piece delivery and byte-exact Metricool hosting
 6. Metricool review/approval tools (need an Advanced plan), analytics feedback loop (needs published posts).
 7. How Metricool Free behaves when more than 20 network-posts are scheduled in a month (its docs say only 20 publish).
 8b. Supervised browser-assisted profile editing in the owner's built-in browser (read-only look first); official profile APIs (not configured, not verified).
+8c. Capturing screenshots of third-party public sites for teardown pieces (needs the owner's built-in browser or another route; the sandbox cannot reach most hosts). Not tried.
+8d. Metricool Starter behaviour (unlimited-with-fair-use scheduling, LinkedIn connection, X as a paid add-on) comes from Metricool's marketing pages and third-party summaries, which disagree on figures. Check Metricool's own pricing page before the owner decides.
 9. Long-term repo growth (GitHub recommends <= 1 GB). JPEG slides keep a batch to roughly 10-30 MB.
 
 ## KNOWN LIMITS

@@ -13,12 +13,12 @@ Nothing starts until the owner approves the kit and answers the blocking decisio
 | # | Prerequisite | Who | Status |
 |---|---|---|---|
 | P1 | Inquiry destination exists (page or form) | Owner decision; Claude can design and, with approval, build in Framer | Missing |
-| P2 | Profile mark chosen (existing logo or direction 1 or 2) | Owner | Open |
+| P2 | Existing approved logo located (confirm the Metricool logo or supply the original file). No new mark will be designed. | Owner | **Missing asset** |
 | P3 | Public contact email decided (or "form only") | Owner | Open |
 | P4 | Instagram is a Professional account linked to the Facebook Page | Owner (in the app) | Unknown |
 | P5 | Current state of each profile captured | Owner sends text; Claude cannot read the sites from here | Not done |
 | P6 | Handles confirmed on X, LinkedIn and YouTube | Owner | Unknown |
-| P7 | Assets rendered from the approved mark | Claude (pipeline) | Waits for P2 |
+| P7 | Banners and Highlight covers rendered around the existing logo | Claude (pipeline) | Waits for P2 |
 
 ## Order and per-platform steps
 Estimates assume the owner pastes by hand and are rough.

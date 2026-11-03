@@ -9,6 +9,17 @@ When the user says "Claude, create a new batch" (or anything similar), follow `d
 rebuild tooling. Use `scripts/wa_cli.py`, `scripts/build_batch.py` and `scripts/wa/*`. Brand, voice and format rules are in
 `docs/CREATIVE_SYSTEM.md`. What is proven vs untested is in `docs/PIPELINE_STATUS.md`: read it first and do not claim more than it says.
 
+## Content principles (permanent, owner decision 2026-11-03)
+1. **Education first.** West Apadana teaches, faceless, in the general spirit of educational personal brands (a reference for philosophy, never for scripts, personality or branding). Topics: websites, marketing, branding, customer acquisition, conversion, AI tools, automation, business growth. Original insight, not generic advice. Strong hook in the first 1-2 seconds, anyone can follow it, a viewer can act on it.
+2. **Starting mix 70/20/10** (education / creative demonstrations and portfolio / brand storytelling). It is a test hypothesis, NOT a limit. The first 20-piece test is 14 / 4 / 2. Adjust on real performance data. Every piece carries a `ground` field (education, demonstration, story). The old growth / authority / lead taxonomy is retired.
+3. **No pitch inside a piece.** Educational pieces teach and then end naturally. No promotional endings, no DM keywords, no booking or inquiry requests, no offers. Saves, shares, genuine questions and an occasional follow invitation are fine. Run `wa_cli.py pitch-lint` on every caption ending and `pitch-lint-pieces` / `calendar-check` before approval packages.
+4. **Offers live on profiles and the landing page only.** CHECK, REBUILD and BRIEF are optional offers reachable from bios, the link destination or a landing page. They never close an educational video or carousel. Free homepage reviews are not the main message of any profile.
+5. **Real third-party sites may be analysed for education** only when the example is publicly accessible, every claim is verifiable by the viewer, the analysis is fair and the source is shown (URL, capture date). Never invent performance data, never imply a company hired us or knows us, no traffic/conversion/revenue claims about a site we do not run. Each piece records its evidence requirement (`content/calendar.json`).
+6. **Voice.** Reels are voiceless (captions plus original sound design) unless the owner approves a voice after listening to the test in `docs/PIPELINE_STATUS.md`. An AI voice is used only if it sounds convincing, natural and right for the brand, and is then disclosed with the posting tool's AI flags.
+7. **Volume is not capped at 20 a month.** 20 pieces is the first test. Metricool Starter is under consideration (owner decision pending; no subscription without approval). On the Free plan keep at least 2 published-post slots a month in reserve (plan uses 18).
+8. **Test posts are not campaign posts.** The disposable posts in the Metricool planner are pipeline tests (see `docs/PIPELINE_STATUS.md`). Never reuse or count them as content.
+9. The three sample pieces (`media/samples-s1/`) are NOT approved for full production until the owner has reviewed the actual files and the reel audio.
+
 ## Hard rules
 1. NEVER publish or schedule a Metricool post without the user's explicit approval of that specific batch. Create drafts only
    (`draft: true`, `autoPublish: false`). The approval request must also state the delivery mode (manual push notification vs automatic).

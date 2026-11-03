@@ -1,11 +1,11 @@
 # X
 
 > GENERATED from `docs/social-identity/kit.json` by `scripts/social_kit.py render`. Edit the JSON, not this file.
-> Status: DRAFT for owner approval. Nothing here has been applied to any live profile.
+> Status: DRAFT for owner approval. Revised after owner review 2026-11-03 (education, authority and premium positioning first; offers secondary; existing logo only). Nothing here has been applied to any live profile.
 
 **Purpose.** Short ideas and a credible front door. X and LinkedIn are not connected to Metricool, so these profiles are static until someone posts there.
 
-**Recommended option: B (Bold / creative).** X rewards a distinct point of view. Bold copy is also the easiest to keep honest in 160 characters. The link in the website field does the converting.
+**Recommended option: C (Education-led / authority).** X rewards a clear point of view. Option C states the teaching and the trade in one line each, within 160 characters, and leaves the website field to do the rest.
 
 ## Character limits used
 
@@ -30,7 +30,7 @@ West Apadana
 Independent digital design studio. Premium websites and digital experiences. Notes on web design, branding and conversion.
 ```
 
-## Option B: Bold / creative  (RECOMMENDED)
+## Option B: Bold / creative
 
 **Display name** (23 / 50)
 
@@ -38,24 +38,24 @@ Independent digital design studio. Premium websites and digital experiences. Not
 West Apadana | Websites
 ```
 
-**Bio** (134 / 160)
+**Bio** (111 / 160)
 
 ```
-Your homepage has one job. We design websites that do it. Notes on web design, branding and conversion. Concepts are labeled concepts.
+Your homepage has one job. Lessons on making it do it, from an independent studio that builds premium websites.
 ```
 
-## Option C: Professional / conversion
+## Option C: Education-led / authority  (RECOMMENDED)
 
-**Display name** (32 / 50)
-
-```
-West Apadana | Web Design Studio
-```
-
-**Bio** (121 / 160)
+**Display name** (12 / 50)
 
 ```
-Premium websites and digital experiences. Notes on web design, branding and conversion. Free homepage review: link below.
+West Apadana
+```
+
+**Bio** (132 / 160)
+
+```
+Practical lessons on websites, branding and conversion. Independent studio building premium websites. Concepts are labeled concepts.
 ```
 
 ## Keywords
@@ -66,17 +66,17 @@ Display name and bio are searchable. Handle is limited to 15 characters: @thewes
 
 ## Call to action
 
-Website field only. No call to action in the bio on option B.
+Website field only. No call to action in the bio.
 
 ## Link strategy
 
 One link in the website field. Pin the best lesson once published. Leave location empty unless a location is approved.
 
-- Website field: inquiry destination (UTM: x)
+- Website field: start page (UTM: x)
 
 ## Profile photo
 
-Same profile mark. X recommends 400x400 (official).
+The existing approved West Apadana logo (MISSING ASSET until supplied or confirmed). Same profile mark. X recommends 400x400 (official).
 
 ## Banner / cover
 

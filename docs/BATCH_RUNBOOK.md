@@ -1,19 +1,21 @@
 # Batch runbook: "Claude, create a new batch"
 
-Default batch = 10 pieces: 2 cinematic reels, 3 educational carousels, 2 website showcases, 2 bold graphics, 1 brand-story post (a storytelling carousel for the feed at 4:5, not an Instagram Story)
-(`config/settings.json -> batch_default`). Default network allocation = exactly 20 network-posts (the Free monthly cap):
+Default batch = 10 pieces, education first (70/20/10 = 7 education, 2 demonstration, 1 story; a starting hypothesis, not a limit): 3 reels, 3 carousels, 1 website showcase, 2 graphics, 1 brand-story post (a storytelling carousel for the feed at 4:5, not an Instagram Story)
+(`config/settings.json -> batch_default`, `ground_mix`). Volume is not capped at 20 a month: the Free plan limits publishing, and Metricool Starter is under consideration (owner decision pending). Default network allocation = exactly 20 network-posts (the Free monthly cap):
 reels -> Instagram + YouTube Shorts; carousels, showcases, graphics -> Instagram + Facebook; story -> Instagram + Threads.
 
 ## 0. Session setup (once per session)
 1. `add_repo thewa404/west-apadana-media access=push`; clone to `/home/claude/west-apadana-media` (one clone, timeout ~10 min); `register_repo_root`.
 2. Load tools with ToolSearch: Metricool (`getBrandSettings`, `getScheduledPosts`, `createScheduledPost`, `updateScheduledPost`) and Framer (`open_project`, `exec`).
 3. `export WA_TRAILER="<commit attribution lines from the session>"`.
-4. Read `docs/PIPELINE_STATUS.md`. Anything marked UNTESTED must not be relied on without testing first (ask before test drafts).
+4. Read `docs/PIPELINE_STATUS.md`. Anything marked UNTESTED must not be relied on without testing first (ask before test drafts). The test posts listed there are NOT campaign content.
 
 ## 1. Plan
 1. `python3 -I scripts/wa_cli.py status` and `budget <YYYY-MM>` for each month the batch will touch. Fetch Metricool `getScheduledPosts` to see what is already queued.
 2. Choose the start date (default: next free slot, every 3 days) with `wa_cli.py calendar <start> <kinds...>`. Per-month totals must stay <= remaining budget.
-3. Write 10 fresh concepts. For each hook, headline and concept run `wa_cli.py dup "<text>"`. Rewrite anything that is similar to history.
+3. Write 10 fresh concepts, each with a `ground` (education / demonstration / story), a topic area, a hook, ONE takeaway and an evidence requirement (see `content/calendar.json` for the shape). Education pieces teach and end naturally: no DM keywords, booking requests or offers.
+   If a piece analyses a real third-party site: public URL, capture date, verbatim words under 15, observable facts only, no performance claims, no implied relationship, include one that does it well. List the subjects in the approval package.
+   Run `wa_cli.py pitch-lint` on every caption ending and `pitch-lint-pieces` / `calendar-check` before the review. For each hook, headline and concept run `wa_cli.py dup "<text>"`. Rewrite anything that is similar to history.
    Rotate themes (obsidian, navy, graphite, ivory), layouts and sources versus the last batch (`inventory/history.json`).
 
 ## 2. Source material

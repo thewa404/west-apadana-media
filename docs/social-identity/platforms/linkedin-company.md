@@ -1,11 +1,11 @@
 # LinkedIn Company Page
 
 > GENERATED from `docs/social-identity/kit.json` by `scripts/social_kit.py render`. Edit the JSON, not this file.
-> Status: DRAFT for owner approval. Nothing here has been applied to any live profile.
+> Status: DRAFT for owner approval. Revised after owner review 2026-11-03 (education, authority and premium positioning first; offers secondary; existing logo only). Nothing here has been applied to any live profile.
 
 **Purpose.** Professional legitimacy for people who check a company before replying. It also indexes well in search for the studio name.
 
-**Recommended option: C (Professional / conversion).** A buyer arrives here to confirm we are real and specific. Plain description, clear scope, honest labeling of concept work.
+**Recommended option: C (Education-led / authority).** A buyer arrives here to confirm we are real and specific. The tagline says what we build and what we teach; the About field explains scope and labels concept work honestly, and mentions optional ways to start only after that.
 
 ## Character limits used
 
@@ -55,19 +55,19 @@ West Apadana
 Your homepage has one job. We design websites that do it.
 ```
 
-**About** (485 / 2000)
+**About** (494 / 2000)
 
 ```
 A homepage has one job: tell a stranger what this is, whether it is for them, why to trust it and what to do next.
 
-West Apadana is an independent digital design studio. We design premium websites and distinctive digital experiences that do that job well, and we teach the thinking behind them.
+West Apadana is an independent digital design studio. We build premium websites and distinctive digital experiences that do that job well, and we teach the thinking behind them.
 
 Our portfolio is concept work, labeled as such. It is not client work.
 
-A free homepage review and a free website improvement assessment are available through the website link on this page.
+Optional ways to start, through the website link on this page: a free homepage review or a free website improvement assessment.
 ```
 
-## Option C: Professional / conversion  (RECOMMENDED)
+## Option C: Education-led / authority  (RECOMMENDED)
 
 **Company name** (12 / 100)
 
@@ -75,27 +75,27 @@ A free homepage review and a free website improvement assessment are available t
 West Apadana
 ```
 
-**Tagline** (108 / 120)
+**Tagline** (93 / 120)
 
 ```
-Independent digital design studio. Premium websites and digital experiences. Free homepage review available.
+Independent studio building premium websites. Practical lessons on web, brand and conversion.
 ```
 
-**About** (832 / 2000)
+**About** (894 / 2000)
 
 ```
-West Apadana is an independent digital design studio. We design premium websites and distinctive digital experiences.
+West Apadana is an independent digital design studio. We build premium websites and distinctive digital experiences.
 
 We also teach. We publish practical lessons on websites, branding, marketing, customer acquisition and conversion, written so a business owner can use them the same day.
 
 Our portfolio is concept work: projects we designed ourselves to explore ideas. They are labeled as concept projects and are not client work.
 
-Ways to start:
+If you would like to work with us, there are optional ways to start:
 - Homepage review (free): a concise review that names three improvements.
 - Website improvement assessment (free): an initial look at what could be improved. It is an assessment, not a promise of a redesign.
 - Project conversation: an invitation to discuss a website you are considering.
 
-Every inquiry is handled personally by the founder. Use the website link on this page to begin.
+Every inquiry is handled personally by the founder. The website link on this page is the place to begin.
 ```
 
 ## Specialties
@@ -110,17 +110,17 @@ Specialties, tagline and the first two lines of About are what LinkedIn search a
 
 ## Call to action
 
-Custom button: 'Visit website' to the inquiry destination (or 'Contact us' if offered).
+Custom button: 'Visit website' to the start page.
 
 ## Link strategy
 
-Website field and custom button both to the inquiry destination. Industry: Design Services (verify). Company size: choose the true option. Location: only if the owner approves one.
+Website field and custom button both to the start page. Industry: Design Services (verify). Company size: choose the true option. Location: only if the owner approves one.
 
-- Website: inquiry destination (UTM: linkedin_company)
+- Website: start page (UTM: linkedin_company)
 
 ## Profile photo
 
-Square logo, 400x400 recommended (268x268 minimum), PNG or JPEG. Same mark as other platforms.
+The existing approved West Apadana logo, 400x400 recommended (268x268 minimum). Same logo as other platforms. MISSING ASSET until the owner supplies or confirms it.
 
 ## Banner / cover
 
@@ -130,4 +130,4 @@ LinkedIn reportedly changed the Company Page cover size in mid-2026 (one source)
 
 - Needs a personal LinkedIn account as admin.
 - Not connected to Metricool. Posting there is manual or a later decision.
-- Cover should carry the tagline in DM Serif italic on obsidian with a gold rule.
+- Cover carries the tagline in DM Serif italic on obsidian with a gold rule. No new logo or monogram.

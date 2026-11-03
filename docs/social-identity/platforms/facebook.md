@@ -1,11 +1,11 @@
 # Facebook Page
 
 > GENERATED from `docs/social-identity/kit.json` by `scripts/social_kit.py render`. Edit the JSON, not this file.
-> Status: DRAFT for owner approval. Nothing here has been applied to any live profile.
+> Status: DRAFT for owner approval. Revised after owner review 2026-11-03 (education, authority and premium positioning first; offers secondary; existing logo only). Nothing here has been applied to any live profile.
 
 **Purpose.** Credibility and a findable business listing. Owners vet a studio here before they message. It must look finished and say exactly what we do.
 
-**Recommended option: C (Professional / conversion).** Facebook visitors are comparing businesses. A plain, specific description and a visible message button convert better than atmosphere.
+**Recommended option: C (Education-led / authority).** Facebook visitors are comparing businesses. A plain, specific description says what we teach and what we build; the message button and the start page carry the optional offers.
 
 ## Character limits used
 
@@ -45,10 +45,10 @@ West Apadana is an independent digital design studio creating premium websites a
 West Apadana | Premium Websites
 ```
 
-**Intro (short)** (57 / 101)
+**Intro (short)** (54 / 101)
 
 ```
-Your homepage has one job. We design websites that do it.
+Your homepage has one job. Lessons on making it do it.
 ```
 
 **Description** (229 / 255)
@@ -57,7 +57,7 @@ Your homepage has one job. We design websites that do it.
 West Apadana is an independent digital design studio. We design premium websites that tell a stranger what you do, why to trust you and what to do next, and we share the thinking behind them. Concept projects are labeled as such.
 ```
 
-## Option C: Professional / conversion  (RECOMMENDED)
+## Option C: Education-led / authority  (RECOMMENDED)
 
 **Page name** (32 / 75)
 
@@ -65,30 +65,30 @@ West Apadana is an independent digital design studio. We design premium websites
 West Apadana | Web Design Studio
 ```
 
-**Intro (short)** (73 / 101)
+**Intro (short)** (70 / 101)
 
 ```
-Premium websites and digital experiences. Free homepage review available.
+Practical lessons on websites and branding. We build premium websites.
 ```
 
-**Description** (213 / 255)
+**Description** (216 / 255)
 
 ```
-Independent digital design studio for premium websites and digital experiences. Lessons on websites, branding and conversion. Free homepage review: three improvements we'd make. Message us or use the website link.
+Independent digital design studio building premium websites and distinctive digital experiences. We share practical lessons on websites, branding and conversion, and show concept projects, always labeled as concepts.
 ```
 
 ## Long About / Overview (all options)
 
-Length 874. Facebook's long-form field limit was not verified; this is well under every figure seen.
+Length 943. Facebook's long-form field limit was not verified; this is well under every figure seen.
 
 ```
-West Apadana is an independent digital design studio. We design premium websites and distinctive digital experiences for businesses that want their first impression to match the quality of their work.
+West Apadana is an independent digital design studio. We build premium websites and distinctive digital experiences for businesses that want their first impression to match the quality of their work.
 
-What we share: lessons on websites, branding and conversion, written for business owners and made to be used the same day.
+What we share: practical lessons on websites, branding and conversion, written for business owners and made to be used the same day.
 
 What we show: concept projects. Our portfolio pieces are concepts we designed ourselves, not client work, and we label them that way every time.
 
-Ways to start:
+If you would like to work with us, there are three optional ways to start:
 - Homepage review (free): a concise review of your homepage that names three improvements.
 - Website improvement assessment (free): an initial look at what could be improved on your site. It is an assessment, not a promise of a redesign.
 - Project conversation: tell us about a website you are considering and we will talk it through.
@@ -104,17 +104,17 @@ Page name suffix, intro and the first sentence of the description are what Faceb
 
 ## Call to action
 
-Action button: 'Send message' (owner handles) or 'Learn more' to the inquiry page. Prefer whichever the owner can answer personally.
+Action button: 'Send message' (owner handles) or 'Learn more' to the start page. Prefer whichever the owner can answer personally.
 
 ## Link strategy
 
-Website field plus the action button both go to the inquiry destination. Messenger is optional; if enabled, Facebook may show its own average-response badge. We cannot control that, and no response time is promised in copy.
+Website field plus the action button both go to the start page. Messenger is optional; if enabled, Facebook may show its own average-response badge. We cannot control that, and no response time is promised in copy.
 
-- Website: inquiry destination (UTM: facebook)
+- Website: start page (UTM: facebook)
 
 ## Profile photo
 
-Same profile mark as Instagram. Facebook displays it small (about 170 px on desktop) and circular.
+The existing approved West Apadana logo (MISSING ASSET until supplied or confirmed). Same profile mark as Instagram. Facebook displays it small (about 170 px on desktop) and circular.
 
 ## Banner / cover
 

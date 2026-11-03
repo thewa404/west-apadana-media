@@ -1,11 +1,11 @@
 # YouTube
 
 > GENERATED from `docs/social-identity/kit.json` by `scripts/social_kit.py render`. Edit the JSON, not this file.
-> Status: DRAFT for owner approval. Nothing here has been applied to any live profile.
+> Status: DRAFT for owner approval. Revised after owner review 2026-11-03 (education, authority and premium positioning first; offers secondary; existing logo only). Nothing here has been applied to any live profile.
 
 **Purpose.** Search and shelf life. Shorts feed discovery now. The About page and playlists are what a curious viewer reads next.
 
-**Recommended option: C (Professional / conversion).** YouTube is the only channel here where the About text is searchable and read in full. Spend the length: topics, concept disclosure, offers, links.
+**Recommended option: C (Education-led / authority).** YouTube is the one channel here where the About text is searchable and read in full. Lead with the lessons and the topics; mention the studio, the concept-work disclosure and the optional offers after that.
 
 ## Character limits used
 
@@ -48,7 +48,7 @@ Your homepage has one job. We design websites that do it, and we show the thinki
 Short lessons on web design, branding and conversion from an independent studio. Concept projects in motion, labeled as concepts, not client work.
 ```
 
-## Option C: Professional / conversion  (RECOMMENDED)
+## Option C: Education-led / authority  (RECOMMENDED)
 
 **Channel name** (32 / 50)
 
@@ -56,16 +56,14 @@ Short lessons on web design, branding and conversion from an independent studio.
 West Apadana | Web Design Studio
 ```
 
-**Description** (719 / 1000)
+**Description** (724 / 1000)
 
 ```
-Independent digital design studio. We design premium websites and distinctive digital experiences, and we teach what we learn.
+Short lessons on websites, branding, marketing, customer acquisition, conversion, AI tools and automation, from an independent studio that builds premium websites and distinctive digital experiences.
 
-What you will find here: short lessons on websites, branding, marketing, customer acquisition, conversion, AI tools and automation. Concept projects shown in motion. They are labeled as concept projects and are not client work.
+What you will find here: practical lessons you can use the same day, and concept projects shown in motion. Concept projects are labeled and are not client work.
 
-Start with a free homepage review: a concise review that names three improvements. Or ask for a free website improvement assessment, an initial look at what could be improved. It is an assessment, not a promise of a redesign. If you are weighing a website project, we are glad to talk it through.
-
-Every inquiry is handled personally by the founder. Links below.
+If you would like to work with us, there are optional ways to start: a free homepage review (a concise review that names three improvements), a free website improvement assessment (an initial look at what could be improved, not a promise of a redesign), or a conversation about a website project. Every inquiry is handled personally by the founder. Links below.
 ```
 
 ## Keywords
@@ -80,15 +78,15 @@ Links below the description. Use the channel email field only if the owner appro
 
 ## Link strategy
 
-Three labeled links. The banner shows links by default on desktop. Each Short's description repeats nothing salesy: education posts stay clean.
+Three labeled links. The banner shows links by default on desktop. Video and Short descriptions stay clean: education posts carry no offers.
 
-- 1. Free homepage review: inquiry destination (UTM: youtube)
+- 1. Start page: lessons first, optional ways to start below (UTM: youtube)
 - 2. Concept work / portfolio
 - 3. Instagram
 
 ## Profile photo
 
-800x800 (recommended), shown as a circle. Same mark.
+The existing approved West Apadana logo, 800x800, shown as a circle. MISSING ASSET until the owner supplies or confirms it.
 
 ## Banner / cover
 

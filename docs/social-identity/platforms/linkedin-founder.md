@@ -1,11 +1,11 @@
 # LinkedIn personal profile (optional founder-brand strategy)
 
 > GENERATED from `docs/social-identity/kit.json` by `scripts/social_kit.py render`. Edit the JSON, not this file.
-> Status: DRAFT for owner approval. Nothing here has been applied to any live profile.
+> Status: DRAFT for owner approval. Revised after owner review 2026-11-03 (education, authority and premium positioning first; offers secondary; existing logo only). Nothing here has been applied to any live profile.
 
 **Purpose.** OPTIONAL. People buy from people, and LinkedIn is where a business owner will look up the person behind the studio. It must be a real person's profile, so this needs the founder's decision on name and photo.
 
-**Recommended option: C (Professional / conversion).** The Four Questions framework is our own idea, so the headline can carry it without borrowing credentials we do not have. No employers, years or results are claimed.
+**Recommended option: C (Education-led / authority).** Authority comes from the ideas, not borrowed credentials. The headline states the role and what is taught; the Four Questions framework is our own. No employers, years or results are claimed.
 
 ## Character limits used
 
@@ -48,24 +48,24 @@ A homepage has one job. I design websites that do it, and I write about how.
 I run West Apadana, an independent digital design studio. Our portfolio is concept work, labeled as concept projects, not client work.
 ```
 
-## Option C: Professional / conversion  (RECOMMENDED)
+## Option C: Education-led / authority  (RECOMMENDED)
 
-**Headline** (123 / 220)
-
-```
-Founder, West Apadana | Websites that answer: what is this, is it for me, can I trust it, what next? | Free homepage review
-```
-
-**About** (669 / 2600)
+**Headline** (125 / 220)
 
 ```
-I run West Apadana, an independent digital design studio. We design premium websites and distinctive digital experiences.
+Founder, West Apadana | Independent studio building premium websites | Writing practical lessons on web, brand and conversion
+```
+
+**About** (537 / 2600)
+
+```
+I run West Apadana, an independent digital design studio. We build premium websites and distinctive digital experiences.
 
 What I post here is practical: how a homepage answers four questions in order (what is this, is it for me, can I trust it, what do I do next), how to review a site in ten minutes, how to write button labels people understand.
 
 Our portfolio is concept work. These are projects we designed ourselves, labeled as concept projects, not client work.
 
-If you would like a second pair of eyes on your homepage, ask for the free homepage review. It names three things I would improve. If you are weighing a website project, I am glad to talk it through.
+If you are weighing a website project, I am glad to talk it through.
 ```
 
 ## Keywords
@@ -76,18 +76,18 @@ Headline first 60 to 70 characters show in search results, so lead with role and
 
 ## Call to action
 
-Featured section: inquiry destination first, then the Four Questions carousel and one concept project once published.
+Featured section: the Four Questions carousel and one concept project once published, then the start page.
 
 ## Link strategy
 
 Link the personal profile to the Company Page as the current position. Never present concept projects as clients or employers.
 
-- Contact info website: inquiry destination (UTM: linkedin_founder)
+- Contact info website: start page (UTM: linkedin_founder)
 - Featured: lessons and concept pieces after publication
 
 ## Profile photo
 
-Decision for the owner. A real portrait builds trust on LinkedIn but conflicts with a faceless brand. Alternative: the studio mark. Do not use a stock face or an AI-generated face.
+The existing approved West Apadana logo (MISSING ASSET until supplied or confirmed). Decision for the owner. A real portrait builds trust on LinkedIn but conflicts with a faceless brand. Alternative: the studio mark. Do not use a stock face or an AI-generated face.
 
 ## Banner / cover
 
