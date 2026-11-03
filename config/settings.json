@@ -51,6 +51,7 @@
       "threads"
     ]
   },
+  "story_note": "The \"story\" kind is a storytelling carousel for the feed (4:5, 1080x1350), NOT an Instagram Story. It is not 9:16.",
   "allocation_note": "Default batch = 20 network-posts, exactly the Free plan monthly cap. The cap is per calendar month and per network post, so a 30-day batch that spans two months gets two budgets. inventory.py budget <YYYY-MM> counts what is already planned.",
   "schedule": {
     "posting_slots": {

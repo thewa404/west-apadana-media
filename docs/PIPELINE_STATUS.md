@@ -1,6 +1,6 @@
 # Pipeline status
 
-Last updated: 2026-11-03 (scheduling test added). Rule: nothing below is claimed beyond its evidence. Update this file whenever a test is run.
+Last updated: 2026-11-03 (sample-piece delivery and byte-exact Metricool hosting test added). Rule: nothing below is claimed beyond its evidence. Update this file whenever a test is run.
 
 ## VERIFIED
 | Capability | Evidence |
@@ -15,6 +15,10 @@ Last updated: 2026-11-03 (scheduling test added). Rule: nothing below is claimed
 | Editing a draft (text, media, network, type) with `updateScheduledPost` | OK. The post `id` changes on every update, the `uuid` is stable. |
 | Read-back of drafts via `getScheduledPosts` | OK, drafts are returned |
 | Draft -> scheduled flip (`updateScheduledPost`, `draft: false`, `autoPublish: false`, far-future date) | OK 2026-11-03 on one disposable test post (approved by the owner). Read-back: `draft: false`, `autoPublish: false`, same date, 3 media unchanged (no re-ingestion), same `uuid`, new `id`. The other test draft was untouched. Provider status still reads "Pending" (as for drafts), so `draft: false` is the evidence. How the planner displays it has NOT been confirmed by the owner yet. |
+| Byte-exact delivery to Metricool-hosted storage | 2026-11-03, sample set: original sha256 == repo copy == fresh GitHub clone (10 files). Then, in the owner's built-in browser (same-origin fetch + SubtleCrypto SHA-256 on static.metricool.com), the 7 carousel JPEGs and the 13.4 MB reel hosted by Metricool hashed IDENTICALLY to the originals (no re-encoding, correct content-type, HTTP 200). |
+| Carousel order preserved | Hosted slide N hashes to local slide N for all 7, in submitted order, after draft creation, after the draft -> scheduled update and on read-back. |
+| Scheduled post retains media, caption, date, destination | Two disposable posts (7-slide carousel; reel with soundtrack) flipped `draft: false`, `autoPublish: false`, 2 June 2027. Read-back: same media URLs and order, caption identical (newline, unicode, quotes), 7 alt texts identical, same date/time, destination instagram, type POST / REEL, same `uuid`, new `id`. |
+| No manual download or upload | Whole chain ran from the sandbox: render -> git push -> Pages URL -> Metricool ingestion. The owner only had to approve one browser-pane access prompt for the verification step. |
 | Still renderer: DM Sans + Inter Display, slide kinds statement/cover/point/compare/story/cta, showcase | OK, visually reviewed; contrast pairs pass `brand-check` |
 | Animated typography reel + original synthesized score | OK locally: 1080x1920, 30 fps, h264 + AAC, about -15 LUFS; typography reel accepted by a YouTube Short draft |
 | Website scroll-through reel from a REAL Framer screenshot | OK locally; accepted by an Instagram Reel draft |
@@ -22,7 +26,7 @@ Last updated: 2026-11-03 (scheduling test added). Rule: nothing below is claimed
 | Toolkit: duplicate check, budget math, calendar planner, payload builder, `build_batch.py` build/publish/payloads | OK on a 4-piece dry-run batch (removed afterwards) |
 
 ## UNTESTED (do not rely on these)
-1. **Actual publishing in either mode**: manual delivery (push notification at the scheduled time) and automatic (`autoPublish: true`, API publish). Never run. The first real approved post must be monitored.
+1. **Actual publishing in either mode** (a successful draft or scheduling test does NOT prove this): manual delivery (push notification at the scheduled time) and automatic (`autoPublish: true`, API publish). Never run. The first real approved post must be monitored.
 2. Reverting a scheduled post back to a draft.
 3. Facebook Reel, Instagram audio selection, first comment, alt text.
 4. Screenshots of the other 8 Framer projects, and Phone-breakpoint captures.
@@ -38,8 +42,14 @@ Last updated: 2026-11-03 (scheduling test added). Rule: nothing below is claimed
 - Shell/WebFetch cannot reach github.io or static.metricool.com.
 - Framer projects are unpublished; screenshots are Framer renders of the project pages.
 - Pages media in folders beginning with `_` or `.` may not be served (the first carousel attempt failed that way; fixed by renaming the folder and committing `.nojekyll`; cause not isolated from deploy timing).
-- Free plan: 20 published network-posts per calendar month, per network.
+- Free plan: 20 published posts per calendar month for the whole brand; a post on two networks counts twice; drafts and scheduled posts do not count until published (Metricool help center, 2026-11-03; the live planner counter has not been checked).
+
+7b. Whether the Instagram account is a Business/Creator account linked to a Facebook Page (required for API auto-publish). Not visible through the tool. Unsupported cases fall back to a notification.
+7c. Whether the Metricool planner displays the two new scheduled test posts as expected (owner has not confirmed).
 
 ## Test posts currently in the Metricool planner (delete when done; Claude has no delete tool)
 - Instagram carousel, SCHEDULED test (manual delivery, `autoPublish: false`, 1 June 2027 10:00 ET): https://app.metricool.com/planner/calendar?blogId=6728476&openWithPostUuid=-6781590428065772322
 - Instagram Reel test DRAFT (website scroll-through, 1 June 2027 11:00 ET): https://app.metricool.com/planner/calendar?blogId=6728476&openWithPostUuid=4351194295856021551
+- Instagram 7-slide carousel SCHEDULED test A (manual delivery, 2 June 2027 10:00 ET): https://app.metricool.com/planner/calendar?blogId=6728476&openWithPostUuid=4185365381692804473
+- Instagram Reel SCHEDULED test B (manual delivery, 2 June 2027 10:30 ET): https://app.metricool.com/planner/calendar?blogId=6728476&openWithPostUuid=8613085067297049378
+- Test posts never count against the monthly allowance unless published; none was published.

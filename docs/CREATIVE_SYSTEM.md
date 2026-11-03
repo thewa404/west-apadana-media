@@ -12,7 +12,7 @@
 |---|---|---|---|
 | Single-image graphic (bold) | image | `slide.html.j2` kind `statement` | 1080x1350 (or 1080x1080) JPEG |
 | Educational carousel | 5-8 slides | `slide.html.j2` kinds `cover`, `point`, `compare`, `cta` | 1080x1350, index/total shown |
-| Brand story | 1-3 slides | kind `story` | 1080x1350 |
+| Brand story | 1-5 slides | kind `story`: a storytelling carousel for the FEED (4:5), not an Instagram Story | 1080x1350 |
 | Website showcase | 1-4 slides | `showcase.html.j2` (browser or phone frame) with REAL screenshot | 1080x1350 |
 | Before/after | carousel | kind `compare` for concepts; for real redesigns use two real screenshots side by side | label as concept |
 | Animated typography reel | 8-15 s video | `reel.html.j2` beats | 1080x1920, 30 fps, h264 + AAC |
@@ -47,3 +47,6 @@ Cinematic live-action footage or AI video generation is NOT available in this to
 3. Videos: contact sheet reviewed, audio present, `wa_cli.py loudness` near -16 LUFS.
 4. Showcase: screenshot is real, label present, project name correct.
 5. Caption proofread; no claims that are not true; platform limits respected.
+
+## Approved 2026-11-03
+Fonts DM Serif Display and DM Mono (alongside Inter Display and DM Sans); obsidian text on champagne gold. Five visual worlds stay, executed as art-directed pieces rather than one template. Rebuilt direction: same-frame slider-wipe seam with registration marks, grayscale proof-sheet fictional "before", caption-bar labels, pin-drop for carousel changes.

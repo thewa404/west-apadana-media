@@ -1,6 +1,6 @@
 # Batch runbook: "Claude, create a new batch"
 
-Default batch = 10 pieces: 2 cinematic reels, 3 educational carousels, 2 website showcases, 2 bold graphics, 1 brand-story post
+Default batch = 10 pieces: 2 cinematic reels, 3 educational carousels, 2 website showcases, 2 bold graphics, 1 brand-story post (a storytelling carousel for the feed at 4:5, not an Instagram Story)
 (`config/settings.json -> batch_default`). Default network allocation = exactly 20 network-posts (the Free monthly cap):
 reels -> Instagram + YouTube Shorts; carousels, showcases, graphics -> Instagram + Facebook; story -> Instagram + Threads.
 
@@ -61,3 +61,6 @@ Automatic publishing has never been run end to end; say so and offer manual deli
 | fonts_ok false | font file missing | check `fonts/` vs `config/brand.json` |
 | verify issue "no audio" | silent video | pass `score` in the reel spec |
 | clone 429 | concurrent git operations | wait 5 s, retry once |
+
+## Verifying hosted media (added 2026-11-03)
+The sandbox cannot fetch static.metricool.com. To prove Metricool hosts the exact bytes: ask the owner to allow the built-in browser on https://static.metricool.com (`request_access`), `preview_start` one hosted URL, then run same-origin `fetch` + `crypto.subtle.digest('SHA-256', ...)` in `javascript_tool` for every hosted URL and compare with `SHA256SUMS`. Result on 2026-11-03: all 8 files identical, carousel order preserved. Hashes are of hosted bytes only; this does not prove publishing.
