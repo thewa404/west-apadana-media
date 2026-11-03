@@ -30,7 +30,7 @@ Cinematic live-action footage or AI video generation is NOT available in this to
 - Process content: how a page is built (wireframe -> type -> color -> motion), decisions behind a concept project, tools, mistakes found and fixed. Use real project facts only.
 
 ## Honesty rules
-- Never fabricate testimonials, client names, metrics, awards or results. Use "Concept project, not client work" on demo work (`config/settings.json -> demo_label`).
+- Never fabricate testimonials, client names, metrics, awards or results. Every Framer portfolio site is a concept/demo project (owner confirmed 2026-11-03): use it in marketing, label it "Concept project, not client work" (`config/settings.json -> demo_label`), and never imply a real client commissioned it.
 - Statistics only with a verifiable source that is named in the caption; otherwise do not use numbers.
 - Before/after: label concepts as concepts. Never present a mockup as a live result.
 

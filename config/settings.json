@@ -10,23 +10,63 @@
     "blogId": "6728476",
     "timezone": "America/New_York",
     "instagram_handle": "thewestapadana",
-    "connected": ["instagram", "facebook", "threads", "youtube"],
+    "connected": [
+      "instagram",
+      "facebook",
+      "threads",
+      "youtube"
+    ],
     "plan": "free"
   },
-  "drafts": { "draft": true, "autoPublish": false },
-  "batch_default": { "reel": 2, "carousel": 3, "showcase": 2, "graphic": 2, "story": 1 },
+  "drafts": {
+    "draft": true,
+    "autoPublish": false
+  },
+  "batch_default": {
+    "reel": 2,
+    "carousel": 3,
+    "showcase": 2,
+    "graphic": 2,
+    "story": 1
+  },
   "allocation": {
-    "reel": ["instagram", "youtube"],
-    "carousel": ["instagram", "facebook"],
-    "showcase": ["instagram", "facebook"],
-    "graphic": ["instagram", "facebook"],
-    "story": ["instagram", "threads"]
+    "reel": [
+      "instagram",
+      "youtube"
+    ],
+    "carousel": [
+      "instagram",
+      "facebook"
+    ],
+    "showcase": [
+      "instagram",
+      "facebook"
+    ],
+    "graphic": [
+      "instagram",
+      "facebook"
+    ],
+    "story": [
+      "instagram",
+      "threads"
+    ]
   },
   "allocation_note": "Default batch = 20 network-posts, exactly the Free plan monthly cap. The cap is per calendar month and per network post, so a 30-day batch that spans two months gets two budgets. inventory.py budget <YYYY-MM> counts what is already planned.",
   "schedule": {
-    "posting_slots": { "instagram": "12:00", "facebook": "10:00", "threads": "13:00", "youtube": "16:00" },
+    "posting_slots": {
+      "instagram": "12:00",
+      "facebook": "10:00",
+      "threads": "13:00",
+      "youtube": "16:00"
+    },
     "days_between_pieces": 3,
     "note": "Slots follow Metricool benchmark data (weekday late-morning for Facebook, mid-afternoon for YouTube). Instagram has no account history yet; revisit after 30 days of analytics."
   },
-  "demo_label": "Concept project, not client work"
+  "demo_label": "Concept project, not client work",
+  "portfolio": {
+    "registry": "assets/portfolio.json",
+    "all_framer_projects_are": "concept/demo (owner confirmed 2026-11-03)",
+    "marketing_use": "allowed",
+    "never_imply": "that any of them was commissioned by a real client"
+  }
 }

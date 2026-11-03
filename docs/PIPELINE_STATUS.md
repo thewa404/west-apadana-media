@@ -1,6 +1,6 @@
 # Pipeline status
 
-Last updated: 2026-11-03. Rule: nothing below is claimed beyond its evidence. Update this file whenever a test is run.
+Last updated: 2026-11-03 (scheduling test added). Rule: nothing below is claimed beyond its evidence. Update this file whenever a test is run.
 
 ## VERIFIED
 | Capability | Evidence |
@@ -14,6 +14,7 @@ Last updated: 2026-11-03. Rule: nothing below is claimed beyond its evidence. Up
 | YouTube Short draft (title, `madeForKids: false`, `privacy: private`) | OK |
 | Editing a draft (text, media, network, type) with `updateScheduledPost` | OK. The post `id` changes on every update, the `uuid` is stable. |
 | Read-back of drafts via `getScheduledPosts` | OK, drafts are returned |
+| Draft -> scheduled flip (`updateScheduledPost`, `draft: false`, `autoPublish: false`, far-future date) | OK 2026-11-03 on one disposable test post (approved by the owner). Read-back: `draft: false`, `autoPublish: false`, same date, 3 media unchanged (no re-ingestion), same `uuid`, new `id`. The other test draft was untouched. Provider status still reads "Pending" (as for drafts), so `draft: false` is the evidence; the owner confirmed the planner display separately. |
 | Still renderer: DM Sans + Inter Display, slide kinds statement/cover/point/compare/story/cta, showcase | OK, visually reviewed; contrast pairs pass `brand-check` |
 | Animated typography reel + original synthesized score | OK locally: 1080x1920, 30 fps, h264 + AAC, about -15 LUFS; typography reel accepted by a YouTube Short draft |
 | Website scroll-through reel from a REAL Framer screenshot | OK locally; accepted by an Instagram Reel draft |
@@ -21,8 +22,8 @@ Last updated: 2026-11-03. Rule: nothing below is claimed beyond its evidence. Up
 | Toolkit: duplicate check, budget math, calendar planner, payload builder, `build_batch.py` build/publish/payloads | OK on a 4-piece dry-run batch (removed afterwards) |
 
 ## UNTESTED (do not rely on these)
-1. **Draft -> scheduled flip** (`updateScheduledPost` with `draft: false`). REQUIRED before any scheduling. Needs the user's approval to test on a far-future test draft.
-2. Actual publishing. Never done, and only after explicit approval.
+1. **Actual publishing in either mode**: manual delivery (push notification at the scheduled time) and automatic (`autoPublish: true`, API publish). Never run. The first real approved post must be monitored.
+2. Reverting a scheduled post back to a draft.
 3. Facebook Reel, Instagram audio selection, first comment, alt text.
 4. Screenshots of the other 8 Framer projects, and Phone-breakpoint captures.
 5. Fetching Pages URLs from the sandbox (blocked). Metricool ingestion is the proof instead.
@@ -39,7 +40,6 @@ Last updated: 2026-11-03. Rule: nothing below is claimed beyond its evidence. Up
 - Pages media in folders beginning with `_` or `.` may not be served (the first carousel attempt failed that way; fixed by renaming the folder and committing `.nojekyll`; cause not isolated from deploy timing).
 - Free plan: 20 published network-posts per calendar month, per network.
 
-## Test drafts currently in the Metricool planner (delete when done)
-- Instagram carousel test, planner link: https://app.metricool.com/planner/calendar?blogId=6728476&openWithPostUuid=-6781590428065772322
-- Instagram Reel test (website scroll-through): https://app.metricool.com/planner/calendar?blogId=6728476&openWithPostUuid=4351194295856021551
-Both are drafts dated 1 June 2027 with `autoPublish: false`.
+## Test posts currently in the Metricool planner (delete when done; Claude has no delete tool)
+- Instagram carousel, SCHEDULED test (manual delivery, `autoPublish: false`, 1 June 2027 10:00 ET): https://app.metricool.com/planner/calendar?blogId=6728476&openWithPostUuid=-6781590428065772322
+- Instagram Reel test DRAFT (website scroll-through, 1 June 2027 11:00 ET): https://app.metricool.com/planner/calendar?blogId=6728476&openWithPostUuid=4351194295856021551

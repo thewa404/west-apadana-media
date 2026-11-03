@@ -27,11 +27,11 @@
             {
               "network": "instagram",
               "date": "2027-06-01T10:00:00-04:00",
-              "status": "draft",
-              "draft_id": "415622896",
+              "status": "scheduled",
+              "draft_id": "415630595",
               "uuid": "-6781590428065772322",
               "planner_url": "https://app.metricool.com/planner/calendar?blogId=6728476&openWithPostUuid=-6781590428065772322",
-              "note": "TEST. Delete in the Metricool planner."
+              "note": "TEST. Scheduled with autoPublish false (manual delivery) for the scheduling test. Delete in the Metricool planner."
             }
           ]
         },

@@ -17,7 +17,7 @@ reels -> Instagram + YouTube Shorts; carousels, showcases, graphics -> Instagram
    Rotate themes (obsidian, navy, graphite, ivory), layouts and sources versus the last batch (`inventory/history.json`).
 
 ## 2. Source material
-- Showcases/walkthroughs: pick Framer projects not featured in the last batch (`assets/screenshots/index.json` + history `source`).
+- Showcases/walkthroughs: pick from `assets/portfolio.json` (all are concept/demo projects; skip any `review_needed` project until the owner approves it). Pick projects not featured in the last batch (`assets/screenshots/index.json` + history `source`).
   `open_project <id>` then `exec`: `const bp=api.tree.get(<page id>).children[0]; return await api.tree.screenshot(bp.id)` (add a Phone breakpoint when it exists).
   `wa_cli.py shots-ingest <file> <slug> "<title>" <project-id> [breakpoint]`; `wa_cli.py crops <file>` suggests section offsets.
 - Everything else is rendered from templates (`templates/`): `slide.html.j2` (statement, cover, point, compare, story, cta), `showcase.html.j2`, `reel.html.j2`.
@@ -41,11 +41,17 @@ reels -> Instagram + YouTube Shorts; carousels, showcases, graphics -> Instagram
 
 ## 6. Approval package
 Reply with: the review sheet, a table (piece, format, networks, date/time, caption preview, draft planner link), per-month budget use, anything unverified, and the exact approval sentence the user must reply with.
-Wait. No approval means no scheduling.
+State the delivery mode being requested: **manual** (`autoPublish: false`, Metricool sends a push notification at the scheduled time) or **automatic** (`autoPublish: true`, Metricool publishes through the API).
+Automatic publishing has never been run end to end; say so and offer manual delivery for the first batch. Wait. No approval means no scheduling.
 
-## 7. After approval
-Scheduling is only allowed once the draft-to-scheduled flip is listed as VERIFIED in `docs/PIPELINE_STATUS.md`. If it is still UNTESTED, test it first on one far-future test draft with the user's approval.
-Then update each approved draft with `updateScheduledPost` (`draft: false`; keep every other field as returned by `getScheduledPosts`), read back, record status `scheduled` in the inventory, commit `inventory/`.
+## 7. After approval (flip verified 2026-11-03)
+1. Only for the pieces the user approved. Call `getScheduledPosts` first and take every field of each draft exactly as returned (media URLs are already on static.metricool.com).
+2. `updateScheduledPost` with the same `id`, `uuid`, `blogId` and the full `info`, changing ONLY `draft: false` (and `autoPublish: true` only if the user approved automatic delivery).
+   Do not edit captions or dates in this step. If something must change, tell the user and get approval first.
+3. Read back with `getScheduledPosts`: confirm `draft: false`, the `autoPublish` value that was approved, unchanged text, date, media count and provider. Provider status shows "Pending" for drafts and scheduled posts alike, so `draft: false` is the evidence.
+4. The `id` changes on every update: `wa_cli.py record-draft <piece> <network> <new id> <uuid> scheduled`, then commit `inventory/` and `inventory/history.json`.
+5. Never modify posts that were not part of the approved batch. Report any mismatch immediately; there is no delete tool, so a wrong scheduled post must be removed by the user in the planner.
+6. The first real automatic publish is untested: tell the user, and check the planner/analytics after the first post time.
 
 ## Failure table
 | Symptom | Likely cause | Fix |

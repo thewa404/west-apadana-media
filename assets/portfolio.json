@@ -1,0 +1,14 @@
+{
+  "policy": "All Framer portfolio sites below are CONCEPT/DEMO projects built by West Apadana (confirmed by the owner 2026-11-03). They may be used in West Apadana marketing. Never imply they were commissioned by real clients; label them 'Concept project, not client work'. Screenshots are real Framer renders (the projects are unpublished). Never invent testimonials, results or metrics for them.",
+  "projects": [
+    { "slug": "torq-auto-works", "title": "TORQ — Auto Works", "project_id": "5QPtHQCdeU1OtrJNOCDR", "industry": "automotive repair", "status": "concept", "screenshots": ["assets/screenshots/torq-auto-works/desktop.jpg"] },
+    { "slug": "vantage-estates", "title": "VANTAGE Estates — Luxury Real Estate (Fictional Concept)", "project_id": "WH2SxJbCjaC1qoWUpFme", "industry": "luxury real estate", "status": "concept", "screenshots": [] },
+    { "slug": "cutscene-hair-club", "title": "CUTSCENE — Hair Club", "project_id": "Z4xId0bvsY4pI8EXVqzE", "industry": "hair / barber", "status": "concept", "screenshots": [] },
+    { "slug": "forme-pilates-studio", "title": "FORMÉ — Pilates Studio", "project_id": "bUXicCEJIhvO81unVbqN", "industry": "fitness / pilates", "status": "concept", "screenshots": [] },
+    { "slug": "marea-hair-studio", "title": "MAREA — Hair Studio", "project_id": "kVCH1HPPP3fYPzEXv6VV", "industry": "hair salon", "status": "concept", "screenshots": [] },
+    { "slug": "morrow-dental-studio", "title": "MORROW DENTAL STUDIO", "project_id": "MaDmk89KL2bofK5TP9aJ", "industry": "dental", "status": "concept", "screenshots": [] },
+    { "slug": "neat-cube", "title": "Neat Cube", "project_id": "PqmKmQDjAAPqbhSAlm1B", "industry": "unknown", "status": "concept", "review_needed": "Title does not describe a business; may be an experiment. Review the project before featuring.", "screenshots": [] },
+    { "slug": "stellar-minotaur", "title": "Stellar Minotaur", "project_id": "TqPBpI5Av7OKWmuVAQoM", "industry": "unknown", "status": "concept", "review_needed": "Title does not describe a business; may be an experiment. Review the project before featuring.", "screenshots": [] },
+    { "slug": "same-satisfaction", "title": "Same Satisfaction", "project_id": "GC7CqMTy8xIuxNbrbcqD", "industry": "unknown", "status": "concept", "review_needed": "Title does not describe a business; may be an experiment. Review the project before featuring.", "screenshots": [] }
+  ]
+}
