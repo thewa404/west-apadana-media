@@ -20,8 +20,9 @@ def font_css():
             if not p.exists():
                 raise FileNotFoundError(f"missing font file {p}")
             fmt = "opentype" if fname.endswith(".otf") else "truetype"
+            style = "italic" if weight.endswith("i") else "normal"  # key "400i" = weight 400, italic face
             faces.append(
-                f"@font-face{{font-family:'{spec['family']}';font-weight:{weight};font-style:normal;"
+                f"@font-face{{font-family:'{spec['family']}';font-weight:{weight.rstrip('i')};font-style:{style};"
                 f"src:url('file://{p}') format('{fmt}');}}"
             )
     return "\n".join(faces)

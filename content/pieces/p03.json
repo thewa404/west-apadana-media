@@ -1,0 +1,47 @@
+{
+  "id": "s1-p03",
+  "series": "Walkthrough",
+  "title": "TORQ Auto Works",
+  "job": "growth",
+  "format": "showcase",
+  "date": "2026-11-18",
+  "networks": [
+    "instagram",
+    "facebook"
+  ],
+  "concept": "Our concept auto-repair site shown tilted in 3D, then straight on with two numbered markers on its booking buttons. Real Framer capture. Concept project, not client work.",
+  "hook": "The first scroll.",
+  "signature_move": "The browser tilts in 3D under a light sweep; slide 2 straightens it and marks two booking buttons.",
+  "captions": {
+    "instagram": "A garage site that looks like a car launch.\n\nTORQ Auto Works is a concept project from our studio, not client work. We designed it to see how a repair shop can feel precise and still make booking obvious.\n\nThere are two booking buttons at the top of the page: one in the navigation, one under the headline. The photography is placeholder.\n\nBuilt in Framer.",
+    "facebook": "TORQ Auto Works is a concept project from our studio, not client work. We designed it to test how a repair shop's website can feel precise and still make booking obvious.\n\nThere are two booking buttons at the top of the page: one in the navigation and one under the headline. The business is fictional and the photography is placeholder.\n\nBuilt in Framer. More concepts to come."
+  },
+  "cta": {
+    "instagram": "Follow for the next concept."
+  },
+  "hashtags": {
+    "instagram": [
+      "#webdesign",
+      "#websitedesign",
+      "#conceptdesign",
+      "#framer",
+      "#automotivebranding",
+      "#uidesign"
+    ],
+    "facebook": [
+      "#WebDesign",
+      "#ConceptDesign"
+    ]
+  },
+  "alt": [
+    "Tilted view of the TORQ Auto Works concept homepage: Built to drive. Born to perform.",
+    "Straight-on view of the TORQ concept homepage with markers on its two Book Service buttons."
+  ],
+  "files_local": [
+    "p03-torq-showcase-1.jpg",
+    "p03-torq-showcase-2.jpg"
+  ],
+  "labels": [
+    "Concept project, not client work (on both slides)"
+  ]
+}

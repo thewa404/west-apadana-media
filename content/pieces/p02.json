@@ -1,0 +1,54 @@
+{
+  "id": "s1-p02",
+  "series": "Field Notes",
+  "title": "Four questions every homepage answers, in order",
+  "job": "authority",
+  "format": "carousel",
+  "date": "2026-11-17",
+  "networks": [
+    "instagram",
+    "facebook"
+  ],
+  "concept": "A homepage must answer four questions in order: what is this, is it for me, can I trust it, what do I do next. Each slide pairs a weak answer with a strong one for an invented bicycle repair shop.",
+  "hook": "Four questions every homepage answers, in order.",
+  "signature_move": "A hand-drawn ring starts on the cover and carries across the seam onto slide 2.",
+  "captions": {
+    "instagram": "Your homepage has to answer four questions, in this order.\n\n1. What is this?\n2. Is it for me?\n3. Can I trust it?\n4. What do I do next?\n\nMost sites lead with number four. A visitor who can't answer the first one never reaches the rest.\n\nTry it on your own site: cover everything below the first screen and ask a stranger what they would say to each. Fix the first question that fails.\n\nWhich one does yours miss?",
+    "facebook": "A homepage has to answer four questions, in this order: What is this? Is it for me? Can I trust it? What do I do next?\n\nMost sites lead with the fourth. A visitor who can't answer the first one rarely gets to the rest.\n\nSwipe through for a weak and a strong answer to each, written for an invented bicycle repair shop. Then try it on your own site: cover everything below the first screen and see whether a stranger could answer all four.\n\nWhich question does your homepage miss?"
+  },
+  "cta": {
+    "instagram": "Save this for your next site review."
+  },
+  "hashtags": {
+    "instagram": [
+      "#webdesign",
+      "#homepagedesign",
+      "#uxdesign",
+      "#smallbusiness",
+      "#websitetips",
+      "#brandstrategy"
+    ],
+    "facebook": [
+      "#WebDesign",
+      "#SmallBusiness"
+    ]
+  },
+  "alt": [
+    "Slide 1: Four questions every homepage answers, in order.",
+    "Slide 2: What is this? Weak answer struck out; stronger: We fix bikes while you wait.",
+    "Slide 3: Is it for me? Weak answer struck out; stronger: Fast repairs for people who ride to work.",
+    "Slide 4: Can I trust it? Weak: passionate about quality. Stronger: prices, photos, a phone number.",
+    "Slide 5: What do I do next? Weak: Click here to learn more. Stronger: Book a repair, one button.",
+    "Slide 6: Checklist of the four questions to run on your own site, with empty boxes.",
+    "Slide 7: Save this for your next site review. Next: the two-minute phone test."
+  ],
+  "files_local": [
+    "p02-four-questions-1.jpg",
+    "p02-four-questions-2.jpg",
+    "p02-four-questions-3.jpg",
+    "p02-four-questions-4.jpg",
+    "p02-four-questions-5.jpg",
+    "p02-four-questions-6.jpg",
+    "p02-four-questions-7.jpg"
+  ]
+}

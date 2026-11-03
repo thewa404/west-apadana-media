@@ -72,3 +72,33 @@ class Renderer:
             pg.close()
             hp.unlink(missing_ok=True)
         return {"out": str(out), "fonts_ok": bool(fonts_ok), "size": list(size)}
+
+
+def _strip(self, template, ctx, out_prefix, n, size=(1080, 1350), fmt="jpeg", quality=94):
+    """Render ONE continuous canvas n slides wide and cut it into n files, so elements can cross slide seams (carousel continuity)."""
+    out_prefix = pathlib.Path(out_prefix)
+    out_prefix.parent.mkdir(parents=True, exist_ok=True)
+    wide = (size[0] * n, size[1])
+    html = env.get_template(template).render(**context({**ctx, "n": n, "sw": size[0], "sh": size[1]}, size))
+    hp = out_prefix.with_name(out_prefix.name + ".tmp.html")
+    hp.write_text(html)
+    pg = self.page(wide)
+    outs = []
+    try:
+        pg.goto(f"file://{hp}")
+        pg.evaluate("window.__ready || document.fonts.ready")
+        pg.wait_for_timeout(250)
+        for i in range(n):
+            out = out_prefix.with_name(f"{out_prefix.name}_{i + 1}.{'jpg' if fmt == 'jpeg' else 'png'}")
+            kw = {"path": str(out), "clip": {"x": i * size[0], "y": 0, "width": size[0], "height": size[1]}}
+            if fmt == "jpeg":
+                kw.update(type="jpeg", quality=quality)
+            pg.screenshot(**kw)
+            outs.append(str(out))
+    finally:
+        pg.close()
+        hp.unlink(missing_ok=True)
+    return outs
+
+
+Renderer.strip = _strip

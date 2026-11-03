@@ -1,0 +1,144 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+{{ font_css }}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:{{ c.gold }}}
+#bg{position:absolute;inset:0}
+#cam{position:absolute;inset:0;transform-origin:50% 50%}
+.scene{position:absolute;left:0;top:0;width:1080px;height:1920px;transform-origin:540px 960px;visibility:hidden}
+.ln{position:absolute;white-space:nowrap;line-height:1;color:{{ c.obsidian }};transform:translate(-50%,-50%)}
+.ln.left{transform:translate(0,-50%)}
+.ib{font-family:'Inter Display';font-weight:700;letter-spacing:-.045em}
+.up{text-transform:uppercase}
+.si{font-family:'DM Serif Display';font-style:italic;letter-spacing:-.012em}
+.mono{font-family:'DM Mono';font-weight:500;text-transform:uppercase;letter-spacing:.14em}
+.bar{position:absolute;background:{{ c.ivory }};transform:scaleX(0)}
+#hero{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none}
+#label{position:absolute;left:72px;top:262px;font-size:34px;color:{{ c.obsidian }}}
+#handle{position:absolute;left:72px;top:1516px;font-size:34px;color:{{ c.obsidian }}}
+#tag{position:absolute;left:90px;top:1380px;font-size:40px;color:{{ c.obsidian }};opacity:0}
+#grain{position:absolute;inset:-20px;background:url('file://{{ grain }}');opacity:.085;mix-blend-mode:multiply;pointer-events:none}
+.m{position:absolute;white-space:nowrap;line-height:1;color:{{ c.obsidian }};transform:translate(-50%,-50%);visibility:hidden}
+</style></head><body>
+<div id="bg"></div>
+<div id="cam">
+  <div class="scene" id="c1"></div><div class="scene" id="c2"></div><div class="scene" id="c3"></div><div class="scene" id="c4"></div>
+  <div class="scene" id="pile"></div>
+  <div id="final"></div>
+</div>
+<svg id="hero" viewBox="0 0 1080 1920"><polyline id="hp" fill="none" stroke="{{ c.ivory }}" stroke-width="60" stroke-linejoin="round" stroke-linecap="butt" points=""/></svg>
+<div id="label" class="mono">Loud Type · 01</div>
+<div id="handle" class="mono">{{ handle }}</div>
+<div id="tag" class="mono">Say what you do.</div>
+<div id="grain"></div>
+<script>
+const T = {{ tl|tojson }};
+const CH='{{ c.gold }}', IV='{{ c.ivory }}', OB='{{ c.obsidian }}';
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const prog=(t,a,b)=>clamp((t-a)/(b-a));
+const EZ={out:x=>1-Math.pow(1-x,3),in:x=>x*x*x,io:x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const hex=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
+const mix=(a,b,p)=>{const A=hex(a),B=hex(b);return 'rgb('+A.map((v,i)=>Math.round(v+(B[i]-v)*p)).join(',')+')'};
+const $=id=>document.getElementById(id);
+const FONT={ib:'700 100px "Inter Display"',si:'italic 400 100px "DM Serif Display"'};
+const measure=(txt,cls)=>{const s=document.createElement('span');s.className='ln '+cls;s.style.cssText='position:absolute;visibility:hidden;font-size:100px;transform:none;left:0;top:0';s.textContent=txt;document.body.appendChild(s);const w=s.getBoundingClientRect().width;s.remove();return w};
+const fitFs=(txt,cls,w)=>100*w/measure(txt,cls);
+
+const scenes={}, bars=[], pileWords=[];
+function line(sceneId,txt,cls,fs,cx,cy,left){
+  const d=document.createElement('div');d.className='ln '+cls+(left?' left':'');d.textContent=txt;d.style.fontSize=fs+'px';d.style.left=cx+'px';d.style.top=cy+'px';
+  $(sceneId).appendChild(d);return d;
+}
+function bar(id,parent,g,color){
+  const b=document.createElement('div');b.className='bar';b.style.left=g.x+'px';b.style.top=(g.y-g.h/2)+'px';b.style.width=g.w+'px';b.style.height=g.h+'px';
+  b.style.transformOrigin=(g.origin==='right'?'100% 50%':'0 50%');if(color)b.style.background=color;
+  $(parent).appendChild(b);bars.push({el:b,g,rot:g.rot,id});return b;
+}
+let ready=false, finalGeom={};
+async function init(){
+  await Promise.all([document.fonts.load('700 100px "Inter Display"'),document.fonts.load('italic 400 100px "DM Serif Display"'),document.fonts.load('500 20px "DM Mono"')]);
+  // c1  WEL / COME  (edge to edge, COME slightly cropped)
+  line('c1','WEL','ib up',fitFs('WEL','ib up',1010),540,650,false);
+  line('c1','COME','ib up',fitFs('COME','ib up',1150),540,1060,false);
+  bar('c1a','c1',{x:-30,y:662,w:1140,h:100,rot:-1.4,origin:'left'});
+  bar('c1b','c1',{x:-30,y:1065,w:1140,h:100,rot:1.2,origin:'right'});
+  // c2  we are / passionate / about / quality.
+  const fs2=fitFs('passionate','ib',940), ls=['We are','passionate','about','quality.'];
+  ls.forEach((s,i)=>line('c2',s,'ib',fs2,70,960+(i-1.5)*fs2*0.98,true));
+  bar('c2','c2',{x:-70,y:985,w:1280,h:92,rot:-8,origin:'left'});
+  // c3  YOUR / ONE-STOP / SHOP.  justified block
+  const L3=['YOUR','ONE-STOP','SHOP.'].map(s=>({s,fs:fitFs(s,'ib up',1020)}));
+  const cap=0.73, gap=34, tot=L3.reduce((a,l)=>a+l.fs*cap,0)+gap*2; let y=960-tot/2;
+  L3.forEach(l=>{const h=l.fs*cap;line('c3',l.s,'ib up',l.fs,540,y+h/2+l.fs*0.035,false);y+=h+gap});
+  bar('c3','c3',{x:-260,y:1130,w:1600,h:96,rot:-31,origin:'left'});
+  // c4  tailored / solutions, / just for you.   serif italic, a little tilted
+  const L4=[['tailored',640],['solutions,',880],['just for you.',980]].map(([s,w])=>({s,fs:fitFs(s,'si',w)}));
+  let y4=960-(L4.reduce((a,l)=>a+l.fs*0.86,0))/2;
+  L4.forEach(l=>{line('c4',l.s,'si',l.fs,540,y4+l.fs*0.43,false);y4+=l.fs*0.86});
+  $('c4').style.transform='rotate(3deg)';
+  bar('c4','c4',{x:-60,y:900,w:1280,h:84,rot:5,origin:'left'});
+  // pile: six buzzwords that stack up and get struck in a rapid run
+  const W=[['Innovative.','si',150,440,430,-3],['DYNAMIC.','ib up',130,600,1330,2],['Premium.','si',160,520,620,2],['RELIABLE.','ib up',120,460,1140,-2],['Excellence.','si',150,600,800,-3]];
+  W.forEach((w,i)=>{const fs=Math.min(w[2]*(w[1]==='ib up'?1:1),w[2]);
+    const d=line('pile',w[0],w[1],fs,w[3],w[4],false);d.style.transform='translate(-50%,-50%) rotate('+w[5]+'deg)';d.style.visibility='hidden';pileWords.push(d);
+    const ww=d.offsetWidth+90, hh=fs*0.30, a=w[5]*Math.PI/180;
+    const yo=(w[1]==='si'?fs*0.09:0);bar('m'+(i+1),'pile',{x:w[3]-ww/2*Math.cos(a),y:w[4]+yo-ww/2*Math.sin(a),w:ww,h:hh,rot:w[5],origin:'left'});});
+  const fsS=fitFs('SYNERGY.','ib up',900);const sy=line('pile','SYNERGY.','ib up',fsS,540,960,false);sy.style.visibility='hidden';sy.style.transform='translate(-50%,-50%)';pileWords.push(sy);
+  // sentence
+  const fsF=176, F=['We fix','bikes while','you wait.'];
+  F.forEach((s,i)=>{const d=document.createElement('div');d.className='ln si left';d.id='f'+i;d.textContent=s;d.style.fontSize=fsF+'px';d.style.left='90px';d.style.top=(T.sentence_top+i*fsF*0.98)+'px';d.style.opacity=0;$('final').appendChild(d)});
+  const r=$('f2').getBoundingClientRect();
+  finalGeom={x0:90,x1:r.left+r.width-10,yu:T.sentence_top+2*fsF*0.98+fsF*0.5+T.underline_dy};
+  ready=true;
+}
+window.__ready=init();
+
+const TAN=Math.tan(-1.5*Math.PI/180);
+function heroY(x){return 960+(x-540)*TAN}
+function setT(t){
+  if(!ready)return;
+  const gp=EZ.io(prog(t,T.ground0,T.ground1));
+  $('bg').style.background=mix(CH,IV,gp);
+  $('grain').style.backgroundPosition=((Math.floor(t*30)*97)%512)+'px '+((Math.floor(t*30)*61)%512)+'px';
+  let imp=0;T.hits.forEach(h=>{if(t>=h.t)imp+=h.amp*Math.exp(-(t-h.t)/0.07)});
+  $('cam').style.transform='scale('+(1+0.014*Math.min(imp,1.6))+')';
+  // scenes
+  T.scenes.forEach(S=>{
+    const el=$(S.id);const vis=t>=S.in&&t<S.out1;el.style.visibility=vis?'visible':'hidden';if(!vis)return;
+    let tr=(S.base||'');const e=S.in<0?1:prog(t,S.in,S.in+0.12);
+    if(e<1)tr+=' scale('+(1.12-0.12*EZ.out(e))+')';
+    const x=EZ.in(prog(t,S.out0,S.out1));if(x>0)tr+=' translate('+(S.dx*x)+'px,'+(S.dy*x)+'px) rotate('+(S.rot*x)+'deg)';
+    el.style.transform=tr;
+  });
+  // pile words appear one by one
+  pileWords.forEach((d,i)=>{const ti=T.pile_t0+T.pile_dt*i;d.style.visibility=(t>=ti&&t<T.pile_out1)?'visible':'hidden';const e=prog(t,ti,ti+0.08);
+    const base=d.style.transform.replace(/scale\([^)]*\)/,'').trim();d.style.transform=base+' scale('+(1.14-0.14*EZ.out(e))+')'});
+  // strike bars
+  bars.forEach(b=>{const s=T.strikes[b.id];if(!s)return;const p=EZ.out(prog(t,s.start,s.hit));b.el.style.transform='rotate('+b.rot+'deg) scaleX('+p+')'});
+  // pile exits (words + their bars share the container)
+  const pe=EZ.in(prog(t,T.pile_out0,T.pile_out1));
+  $('pile').style.visibility=(t>=T.pile_t0&&t<T.pile_out1)?'visible':'hidden';
+  $('pile').style.transform='translate('+(-1500*pe)+'px,'+(-260*pe)+'px) rotate('+(-14*pe)+'deg)';
+  // hero bar
+  const hp=$('hp');const N=90;let pts=[];
+  const hs=T.strikes.m6;
+  if(t<hs.start){hp.setAttribute('points','');}
+  else{
+    const sweep=EZ.out(prog(t,hs.start,hs.hit));
+    const e=prog(t,T.morph0,T.morph1);
+    const col=mix(IV,OB,EZ.io(prog(t,T.col0,T.col1)));hp.setAttribute('stroke',col);
+    const sw=60+(14-60)*EZ.io(e);hp.setAttribute('stroke-width',sw);
+    for(let i=0;i<N;i++){const u=i/(N-1);
+      let xs=-40+u*1200*Math.max(sweep,0.0001);if(sweep<1&&u>0)xs=-40+u*1200*sweep;
+      let ys=heroY(xs);
+      const xe=finalGeom.x0+u*(finalGeom.x1-finalGeom.x0),ye=finalGeom.yu;
+      const q=EZ.io(clamp(e*1.5-(1-u)*0.5));
+      const x=xs+(xe-xs)*q,yv=ys+(ye-ys)*q+T.belly*Math.sin(Math.PI*q)*Math.sin(Math.PI*Math.min(1,u*1.0+0.15));
+      pts.push(x.toFixed(1)+','+yv.toFixed(1));}
+    hp.setAttribute('points',pts.join(' '));
+  }
+  // sentence + tag
+  for(let i=0;i<3;i++){const e=EZ.out(prog(t,T.sentence0+i*T.sentence_dt,T.sentence0+i*T.sentence_dt+0.45));const d=$('f'+i);d.style.opacity=e;d.style.transform='translate(0,calc(-50% + '+((1-e)*46)+'px))'}
+  $('tag').style.opacity=EZ.out(prog(t,T.tag0,T.tag0+0.5));
+}
+window.setT=setT;
+</script></body></html>

@@ -1,0 +1,5 @@
+DM Mono (DMMono-Regular.ttf, DMMono-Medium.ttf)
+Designed by Colophon Foundry for DeepMind. Source: https://github.com/googlefonts/dm-mono
+Licence: SIL Open Font License, Version 1.1. The upstream README states "All fonts are licensed under the SIL Open Font License"
+and the repository does not ship a separate OFL.txt. The standard SIL OFL 1.1 text is reproduced in OFL-DMSerif.txt
+(the same licence; the copyright line at its top belongs to the DM Serif project, not to DM Mono).

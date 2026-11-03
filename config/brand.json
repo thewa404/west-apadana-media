@@ -15,24 +15,74 @@
   "extra_colors_note": "gold_deep is a derived darker gold used ONLY for small text/rules on ivory, because the brand gold is too light there to read.",
   "min_text_contrast": 4.5,
   "approved_text_pairs": [
-    ["ivory", "obsidian"],
-    ["ivory", "navy"],
-    ["ivory", "graphite"],
-    ["gold", "obsidian"],
-    ["gold", "navy"],
-    ["obsidian", "ivory"],
-    ["gold_deep", "ivory"]
+    [
+      "ivory",
+      "obsidian"
+    ],
+    [
+      "ivory",
+      "navy"
+    ],
+    [
+      "ivory",
+      "graphite"
+    ],
+    [
+      "gold",
+      "obsidian"
+    ],
+    [
+      "gold",
+      "navy"
+    ],
+    [
+      "obsidian",
+      "ivory"
+    ],
+    [
+      "gold_deep",
+      "ivory"
+    ],
+    [
+      "obsidian",
+      "gold"
+    ]
   ],
   "fonts": {
     "display": {
       "family": "Inter Display",
       "role": "Headlines. Licensed (OFL) stand-in for Neue Haas Grotesk, which is a commercial font and is not installed. Replace by dropping licensed files in fonts/ and editing this block.",
-      "files": { "500": "InterDisplay-Medium.otf", "600": "InterDisplay-SemiBold.otf", "700": "InterDisplay-Bold.otf" }
+      "files": {
+        "500": "InterDisplay-Medium.otf",
+        "600": "InterDisplay-SemiBold.otf",
+        "700": "InterDisplay-Bold.otf"
+      }
     },
     "body": {
       "family": "DM Sans",
       "role": "Body copy, captions, labels (OFL).",
-      "files": { "400": "DMSans-Regular.ttf", "500": "DMSans-Medium.ttf", "700": "DMSans-Bold.ttf" }
+      "files": {
+        "400": "DMSans-Regular.ttf",
+        "500": "DMSans-Medium.ttf",
+        "700": "DMSans-Bold.ttf"
+      }
+    },
+    "editorial": {
+      "family": "DM Serif Display",
+      "role": "Editorial headlines and human lines (roman and italic). OFL. Approved by the owner 2026-11-03.",
+      "files": {
+        "400": "DMSerifDisplay-Regular.ttf",
+        "400i": "DMSerifDisplay-Italic.ttf"
+      }
+    },
+    "mono": {
+      "family": "DM Mono",
+      "role": "Index numbers, labels, credits, handle. OFL. Approved by the owner 2026-11-03.",
+      "files": {
+        "400": "DMMono-Regular.ttf",
+        "500": "DMMono-Medium.ttf"
+      }
     }
-  }
+  },
+  "approved_pairs_note": "obsidian text on champagne gold approved by the owner 2026-11-03 (ratio 8.21). Gold text on ivory stays off-limits; use gold_deep."
 }

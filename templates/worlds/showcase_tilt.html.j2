@@ -1,0 +1,71 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+{{ font_css }}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:{{ sw*n }}px;height:{{ sh }}px;overflow:hidden;color:{{ c.ivory }};
+  background:
+   radial-gradient(900px 760px at 1250px 800px, rgba(70,104,160,.55) 0%, rgba(22,34,56,0) 70%),
+   radial-gradient(1500px 1100px at 1100px 760px,#27406a 0%,{{ c.navy }} 52%,#0a1222 100%)}
+.abs{position:absolute}
+.mono{font-family:'DM Mono';font-weight:500;text-transform:uppercase;letter-spacing:.14em;font-size:28px}
+.gold{color:{{ c.gold }}}
+.serif{font-family:'DM Serif Display'}
+.it{font-style:italic}
+.frame{position:absolute;border-radius:16px;overflow:hidden;background:#101010;box-shadow:0 70px 120px rgba(0,0,0,.55),0 0 0 1.5px rgba(198,166,106,.6)}
+.bar{height:44px;background:{{ c.graphite }};display:flex;align-items:center;gap:9px;padding:0 18px}
+.bar i{width:13px;height:13px;border-radius:50%;background:#5a5a5a;display:block}
+.shot{overflow:hidden}.shot img{display:block}
+.sweep{position:absolute;inset:0;background:linear-gradient(112deg,rgba(242,237,228,0) 34%,rgba(242,237,228,.20) 47%,rgba(242,237,228,0) 60%);mix-blend-mode:screen}
+#beam{position:absolute;left:480px;top:-260px;width:520px;height:2000px;transform:rotate(24deg);background:linear-gradient(90deg,rgba(242,237,228,0),rgba(242,237,228,.075),rgba(242,237,228,0));filter:blur(8px)}
+#grain{position:absolute;inset:0;background:url('file://{{ grain }}');opacity:.07;mix-blend-mode:overlay;pointer-events:none}
+.mk{position:absolute;width:46px;height:46px;border-radius:50%;background:{{ c.gold }};color:{{ c.obsidian }};font:600 21px 'DM Mono';display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 6px rgba(198,166,106,.28)}
+.key{display:flex;align-items:center;gap:22px;font:400 38px/1.2 'DM Sans'}
+.key .mk{position:static;flex:none}
+.chip{border:1.5px solid {{ c.gold }};color:{{ c.gold }};padding:13px 22px;border-radius:40px;font:500 24px 'DM Mono';text-transform:uppercase;letter-spacing:.1em}
+</style></head><body>
+<div id="beam"></div>
+
+{# ================= slide 1 ================= #}
+<div class="abs mono gold" style="left:72px;top:64px">Walkthrough · № 01</div>
+<div class="abs mono" style="left:{{ sw - 72 - 120 }}px;top:64px;width:120px;text-align:right">1 / 2</div>
+<div class="abs serif it" style="left:72px;top:122px;font-size:150px;line-height:.9;letter-spacing:-.022em">The first<br>scroll.</div>
+<div class="abs mono" style="left:76px;top:440px">TORQ Auto Works</div>
+
+<div class="abs" style="left:0;top:0;width:{{ sw }}px;height:{{ sh }}px;perspective:2600px;overflow:hidden">
+  <div class="abs" style="left:90px;top:405px;width:1000px;height:760px;transform-style:preserve-3d;transform:rotateX(13deg) rotateY(-24deg) rotateZ(2.5deg);transform-origin:40% 40%">
+    <div class="frame" style="left:262px;top:-130px;width:760px;transform:translateZ(-160px);filter:brightness(.62) blur(1.6px)">
+      <div class="shot"><img src="file://{{ crop_ivory }}" style="width:760px"></div>
+    </div>
+    <div class="frame" style="left:10px;top:80px;width:940px">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <div class="shot"><img src="file://{{ crop_hero_tall }}" style="width:940px"></div>
+      <div class="sweep"></div>
+    </div>
+  </div>
+</div>
+<div class="abs" style="left:72px;top:1262px"><div class="chip">Concept project, not client work</div></div>
+<div class="abs mono" style="left:{{ sw - 72 - 420 }}px;top:1274px;width:420px;text-align:right">{{ handle }}</div>
+
+{# ================= slide 2 ================= #}
+{% set X = sw %}
+<div class="abs mono gold" style="left:{{ X + 72 }}px;top:64px">TORQ Auto Works</div>
+<div class="abs mono" style="left:{{ X + sw - 72 - 120 }}px;top:64px;width:120px;text-align:right">2 / 2</div>
+<div class="frame" style="left:{{ X + 60 }}px;top:128px;width:960px">
+  <div class="bar"><i></i><i></i><i></i></div>
+  <div class="shot"><img src="file://{{ crop_hero }}" style="width:960px"></div>
+  <div class="sweep" style="opacity:.55"></div>
+</div>
+{# markers: frame content origin = (X+60, 128+44); scale 960/1440 #}
+<div class="mk" style="left:{{ X + 60 + 1224*0.6667 - 30 }}px;top:{{ 172 + 16*0.6667 - 30 }}px">01</div>
+<div class="mk" style="left:{{ X + 60 + 10 }}px;top:{{ 172 + 593 - 23 }}px">02</div>
+<svg class="abs" style="left:{{ X + 60 }}px;top:880px" width="960" height="36" viewBox="0 0 960 36"><g stroke="{{ c.gold }}" stroke-width="2" fill="none"><line x1="2" y1="18" x2="392" y2="18"/><line x1="568" y1="18" x2="958" y2="18"/><line x1="2" y1="6" x2="2" y2="30"/><line x1="958" y1="6" x2="958" y2="30"/></g><text x="480" y="26" text-anchor="middle" font-family="DM Mono" font-weight="500" font-size="24" letter-spacing="2.5" fill="{{ c.gold }}">1440 PX</text></svg>
+<div class="abs" style="left:{{ X + 72 }}px;top:940px;width:940px">
+  <div class="key"><div class="mk">01</div><div>A booking button in the navigation.</div></div>
+  <div class="key" style="margin-top:20px"><div class="mk">02</div><div>Another under the headline.</div></div>
+</div>
+<div class="abs serif it" style="left:{{ X + 72 }}px;top:1100px;width:940px;font-size:62px;line-height:1.06;letter-spacing:-.01em">Two ways to book, right at the top.</div>
+<div class="abs" style="left:{{ X + 72 }}px;top:1262px"><div class="chip">Concept project, not client work</div></div>
+<div class="abs mono" style="left:{{ X + sw - 72 - 420 }}px;top:1274px;width:420px;text-align:right">{{ handle }}</div>
+
+<div id="grain"></div>
+<script>window.__ready=Promise.all([document.fonts.load('italic 400 100px "DM Serif Display"'),document.fonts.load('500 20px "DM Mono"'),document.fonts.load('400 20px "DM Sans"')]).then(()=>Promise.all([...document.images].map(i=>i.decode())));</script>
+</body></html>

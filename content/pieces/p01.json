@@ -1,0 +1,41 @@
+{
+  "id": "s1-p01",
+  "series": "Loud Type",
+  "title": "\"Welcome\" gets struck out",
+  "job": "growth",
+  "format": "reel",
+  "date": "2026-11-16",
+  "networks": [
+    "instagram",
+    "youtube"
+  ],
+  "concept": "A homepage cliché is blown past the edges of the frame and struck out until one concrete sentence survives. Invented example: a bicycle repair shop.",
+  "hook": "Delete the word \"Welcome\" from your homepage.",
+  "signature_move": "The strike bar bends down and becomes the underline of the one sentence that survives.",
+  "captions": {
+    "instagram": "Delete the word \"Welcome\" from your homepage.\n\nEvery business site opens with a sentence that could belong to anyone. A visitor reads it, learns nothing and moves on.\n\nSay what you do instead. \"We fix bikes while you wait\" tells a stranger more than three lines about passion and quality. (An invented example, not a real shop.)\n\nWhat does the first sentence on your homepage say?",
+    "youtube": "Every homepage opens with a sentence that could belong to anyone. Say what you do instead.\n\nLoud Type № 01 from West Apadana, an independent digital design studio for premium websites. The bicycle shop in this film is an invented example."
+  },
+  "cta": {
+    "instagram": "Send this to someone whose site still says Welcome."
+  },
+  "hashtags": {
+    "instagram": [
+      "#webdesign",
+      "#websitedesign",
+      "#copywriting",
+      "#smallbusinessmarketing",
+      "#typography",
+      "#brandstrategy"
+    ]
+  },
+  "titles": {
+    "youtube": "Why 'Welcome' is the weakest word on your homepage"
+  },
+  "files_local": [
+    "p01-welcome-reel.mp4"
+  ],
+  "labels": [
+    "Invented example (caption)"
+  ]
+}

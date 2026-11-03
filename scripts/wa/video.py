@@ -7,7 +7,7 @@ import tempfile
 from . import audio, render
 
 
-def render_reel(r, template, ctx, out_mp4, duration, fps=30, size=(1080, 1920), score=None, keep=False):
+def render_reel(r, template, ctx, out_mp4, duration, fps=30, size=(1080, 1920), score=None, keep=False, crf=20):
     """r: render.Renderer. score: dict of audio.synth kwargs (None = silent, NOT recommended for FB/Reels)."""
     out_mp4 = pathlib.Path(out_mp4)
     out_mp4.parent.mkdir(parents=True, exist_ok=True)
@@ -19,7 +19,7 @@ def render_reel(r, template, ctx, out_mp4, duration, fps=30, size=(1080, 1920), 
     n = int(round(duration * fps))
     try:
         pg.goto(f"file://{hp}")
-        pg.evaluate("document.fonts.ready")
+        pg.evaluate("window.__ready || document.fonts.ready")
         pg.wait_for_timeout(200)
         for i in range(n):
             pg.evaluate("t => window.setT(t)", i / fps)
@@ -30,9 +30,11 @@ def render_reel(r, template, ctx, out_mp4, duration, fps=30, size=(1080, 1920), 
     wav = None
     if score is not None:
         wav = work / "score.wav"
-        audio.synth(duration, wav, **score)
+        score = dict(score)
+        engine = score.pop("engine", "ambient")
+        (audio.strike_score if engine == "strike" else audio.synth)(duration, wav, **score)
         cmd += ["-i", str(wav)]
-    cmd += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", "-r", str(fps)]
+    cmd += ["-c:v", "libx264", "-preset", "veryfast", "-crf", str(crf), "-pix_fmt", "yuv420p", "-r", str(fps)]
     if wav:
         cmd += ["-af", "loudnorm=I=-16:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-ac", "2", "-shortest"]
     cmd += ["-movflags", "+faststart", str(out_mp4)]
