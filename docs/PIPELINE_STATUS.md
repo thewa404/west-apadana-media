@@ -25,6 +25,8 @@ Last updated: 2026-11-03 (sample-piece delivery and byte-exact Metricool hosting
 | Real website screenshots (Framer `exec` -> file in sandbox -> ingest) | OK for one project (TORQ). Read-only. |
 | Toolkit: duplicate check, budget math, calendar planner, payload builder, `build_batch.py` build/publish/payloads | OK on a 4-piece dry-run batch (removed afterwards) |
 
+| Profile editing by our tools (read-only investigation 2026-11-03) | CONFIRMED NOT AVAILABLE: the Metricool MCP has no profile-edit tool; no installed connector edits social profiles; the sandbox cannot read instagram.com or youtube.com. Details in `docs/social-identity/30-tool-capability.md`. |
+
 ## UNTESTED (do not rely on these)
 1. **Actual publishing in either mode** (a successful draft or scheduling test does NOT prove this): manual delivery (push notification at the scheduled time) and automatic (`autoPublish: true`, API publish). Never run. The first real approved post must be monitored.
 2. Reverting a scheduled post back to a draft.
@@ -33,7 +35,8 @@ Last updated: 2026-11-03 (sample-piece delivery and byte-exact Metricool hosting
 5. Fetching Pages URLs from the sandbox (blocked). Metricool ingestion is the proof instead.
 6. Metricool review/approval tools (need an Advanced plan), analytics feedback loop (needs published posts).
 7. How Metricool Free behaves when more than 20 network-posts are scheduled in a month (its docs say only 20 publish).
-8. Long-term repo growth (GitHub recommends <= 1 GB). JPEG slides keep a batch to roughly 10-30 MB.
+8b. Supervised browser-assisted profile editing in the owner's built-in browser (read-only look first); official profile APIs (not configured, not verified).
+9. Long-term repo growth (GitHub recommends <= 1 GB). JPEG slides keep a batch to roughly 10-30 MB.
 
 ## KNOWN LIMITS
 - No live-action footage and no AI video generation: reels are typographic / motion-graphic / website scroll-throughs. No licensed music (original synthesized score only). Audio is verified by levels, not by listening.
