@@ -1,0 +1,39 @@
+{
+  "source": "Metricool help: Publishing Requirements for Images and Videos (fetched 2026-11-03) and Free plan limits page. Re-check when something fails.",
+  "free_plan": {
+    "monthly_publish_cap": 20,
+    "counts_per_network": true,
+    "only_published_posts_count": true,
+    "drafts_count": false,
+    "note": "One post sent to Instagram and Facebook uses 2 of the 20. More than 20 can be scheduled but only 20 publish in that calendar month."
+  },
+  "networks": {
+    "instagram": {
+      "image": { "formats": ["PNG", "JPEG"], "max_mb": 8, "min_ratio": 0.75, "max_ratio": 1.91, "min_w": 320, "max_w": 1440, "preferred": [1080, 1350] },
+      "video": { "formats": ["mp4", "mov"], "max_mb": 500, "min_s": 3, "max_s": 900, "reel_ratio": 0.5625, "max_w": 1920, "fps": [23, 60], "audio": "aac", "max_mbps": 25 },
+      "caption_max": 2200,
+      "hashtags_max": 30,
+      "hashtags_recommended": [3, 8],
+      "carousel_min": 2,
+      "carousel_max": 10
+    },
+    "facebook": {
+      "image": { "formats": ["PNG", "JPEG"], "max_mb": 30, "min_ratio": 0.5, "max_ratio": 2.0, "min_w": 320, "max_w": 2048, "preferred": [1080, 1350] },
+      "video": { "formats": ["mp4", "mov"], "max_mb": 500, "min_s": 1, "max_s": 14400, "fps": [23, 60], "audio": "aac", "max_mbps": 25 },
+      "caption_max": 5000,
+      "hashtags_recommended": [0, 3]
+    },
+    "threads": {
+      "image": { "formats": ["PNG", "JPEG"], "max_mb": 8, "min_ratio": 0.1, "max_ratio": 10, "min_w": 320, "max_w": 1440, "preferred": [1080, 1350] },
+      "video": { "formats": ["mp4", "mov"], "max_mb": 1000, "min_s": 1, "max_s": 300, "reel_ratio": 0.5625, "fps": [23, 60], "audio": "aac", "max_mbps": 25 },
+      "caption_max": 500,
+      "hashtags_recommended": [0, 1]
+    },
+    "youtube": {
+      "video": { "formats": ["mp4", "mov"], "max_mb": 500, "short_max_s": 180, "min_s": 1, "fps": [23, 60], "audio": "aac", "max_mbps": 25 },
+      "title_max": 100,
+      "description_max": 5000,
+      "notes": "Shorts: vertical or square, up to 3 minutes. Metricool requires a title and the made-for-kids flag."
+    }
+  }
+}

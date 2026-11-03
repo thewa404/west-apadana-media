@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+{{ font_css }}
+:root{--obsidian:{{ c.obsidian }};--graphite:{{ c.graphite }};--navy:{{ c.navy }};--gold:{{ c.gold }};--ivory:{{ c.ivory }};--gold-deep:{{ extra.gold_deep }}}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:{{ w }}px;height:{{ h }}px;overflow:hidden;background:var(--obsidian)}
+body{font-family:'DM Sans',sans-serif;color:var(--ivory);-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.canvas{position:relative;width:{{ w }}px;height:{{ h }}px;overflow:hidden}
+.display{font-family:'Inter Display','Inter',sans-serif;font-weight:700;letter-spacing:-.04em;line-height:.94}
+.display em{font-style:normal;color:var(--gold)}
+.grain{position:absolute;inset:0;opacity:.10;mix-blend-mode:overlay;pointer-events:none;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.t-obsidian{background:radial-gradient(90% 60% at 100% 0%,#1b1b1b 0%,var(--obsidian) 60%);color:var(--ivory)}
+.t-navy{background:radial-gradient(120% 90% at 85% 0%,#22385c 0%,var(--navy) 45%,#0e1829 100%);color:var(--ivory)}
+.t-graphite{background:linear-gradient(160deg,#2c2c2c 0%,var(--graphite) 50%,#1a1a1a 100%);color:var(--ivory)}
+.t-ivory{background:var(--ivory);color:var(--obsidian)}
+.t-ivory .display em{color:var(--gold-deep)}
+{% block css %}{% endblock %}
+</style></head>
+<body><div class="canvas {% block theme %}t-obsidian{% endblock %}">{% block body %}{% endblock %}<div class="grain"></div></div>{% block script %}{% endblock %}</body></html>

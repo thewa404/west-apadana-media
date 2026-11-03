@@ -1,0 +1,50 @@
+{% extends "base.html.j2" %}
+{#
+  Website showcase still. REAL screenshot only (file path from assets/screenshots).
+  shot_path, shot_w, shot_h (source px), offset_y (source px from top), device: browser|phone,
+  title, sub, kicker, label (e.g. demo label), chrome_label, index/total, theme
+#}
+{% block theme %}t-{{ theme|default('navy') }}{% endblock %}
+{% block css %}
+.slide{position:absolute;inset:0;padding:84px 88px;display:flex;flex-direction:column;z-index:2}
+.top,.bottom{display:flex;justify-content:space-between;align-items:center;font-size:26px;letter-spacing:.26em;text-transform:uppercase}
+.top{font-weight:700}.top .brand{color:var(--gold)}.bottom{font-weight:500;letter-spacing:.2em;opacity:.85}
+.main{flex:1;display:flex;flex-direction:column;justify-content:flex-start;padding:40px 0 30px}
+.frame{position:absolute;inset:44px;border:2px solid var(--gold);opacity:.24;pointer-events:none;z-index:1}
+.glow{position:absolute;left:-200px;bottom:-300px;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(198,166,106,.22),rgba(198,166,106,0) 66%);z-index:0}
+.device{position:relative;margin:0 auto;border:2px solid rgba(198,166,106,.55);background:#0b0b0b;overflow:hidden;box-shadow:0 70px 120px rgba(0,0,0,.55)}
+.device.browser{width:904px;border-radius:22px}
+.chrome{height:58px;display:flex;align-items:center;gap:12px;padding:0 24px;background:#171717}
+.chrome i{width:14px;height:14px;border-radius:50%;background:#3b3b3b;display:block}
+.chrome span{margin-left:22px;flex:1;height:30px;border-radius:15px;background:#242424;color:#9a9a9a;font-size:18px;display:flex;align-items:center;padding:0 18px;letter-spacing:.04em}
+.screen{position:relative;overflow:hidden;background:#fff}
+.device.browser .screen{width:904px;height:{{ screen_h|default(590) }}px}
+.device.phone{width:400px;border-radius:66px;padding:16px;margin-top:6px}
+.device.phone .screen{width:368px;height:{{ screen_h|default(760) }}px;border-radius:50px}
+.screen img{position:absolute;left:0;top:0;display:block}
+.text{margin-top:{{ text_gap|default(34) }}px}
+.kicker{font-size:28px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:20px}
+h2{font-size:{{ size|default(84) }}px}
+.sub{font-size:32px;line-height:1.38;margin-top:16px;max-width:880px;opacity:.92}
+.label{display:inline-block;margin-top:22px;padding:10px 20px;border:2px solid var(--gold);color:var(--gold);font-size:24px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+{% endblock %}
+{% block body %}
+{% set dev_w = 904 if device != 'phone' else 368 %}
+<div class="glow"></div><div class="frame"></div>
+<div class="slide">
+  <div class="top"><span class="brand">West Apadana</span><span>{% if total %}{{ '%02d'|format(index) }} / {{ '%02d'|format(total) }}{% endif %}</span></div>
+  <div class="main">
+    <div class="device {{ device|default('browser') }}">
+      {% if device != 'phone' %}<div class="chrome"><i></i><i></i><i></i><span>{{ chrome_label|default('Concept preview') }}</span></div>{% endif %}
+      <div class="screen"><img src="file://{{ shot_path }}" style="width:{{ dev_w }}px;transform:translateY(-{{ (offset_y|default(0)) * dev_w / shot_w }}px)"></div>
+    </div>
+    <div class="text">
+      {% if kicker %}<div class="kicker">{{ kicker }}</div>{% endif %}
+      <h2 class="display">{{ title|mark }}</h2>
+      {% if sub %}<div class="sub">{{ sub }}</div>{% endif %}
+      {% if label %}<div class="label">{{ label }}</div>{% endif %}
+    </div>
+  </div>
+  <div class="bottom"><span>{{ handle }}</span><span>{% if swipe %}Swipe →{% else %}{{ footer_right|default('') }}{% endif %}</span></div>
+</div>
+{% endblock %}

@@ -6,14 +6,21 @@
       "note": "Pipeline test artifacts. NOT real content, never counted against the posting budget. Both drafts below should be deleted in the Metricool planner when testing is finished (Claude has no delete tool).",
       "pieces": [
         {
-          "id": "_tests-image",
-          "format": "graphic",
-          "concept": "pipeline test image",
+          "id": "_tests-carousel",
+          "format": "carousel",
+          "concept": "pipeline test: Instagram carousel (also used for Facebook and Threads image tests)",
           "files": [
             {
-              "path": "media/slide01.png",
-              "url": "https://thewa404.github.io/west-apadana-media/media/slide01.png",
-              "sha256": "0a794546275976efbe79128bd8e1b56797decfbfd62bd2b58d3d9840d0dbbba4"
+              "path": "media/tests/carousel_test_1.png",
+              "url": "https://thewa404.github.io/west-apadana-media/media/tests/carousel_test_1.png"
+            },
+            {
+              "path": "media/tests/carousel_test_2.png",
+              "url": "https://thewa404.github.io/west-apadana-media/media/tests/carousel_test_2.png"
+            },
+            {
+              "path": "media/tests/carousel_test_3.png",
+              "url": "https://thewa404.github.io/west-apadana-media/media/tests/carousel_test_3.png"
             }
           ],
           "targets": [
@@ -21,22 +28,26 @@
               "network": "instagram",
               "date": "2027-06-01T10:00:00-04:00",
               "status": "draft",
-              "draft_id": "415585760",
+              "draft_id": "415622896",
               "uuid": "-6781590428065772322",
               "planner_url": "https://app.metricool.com/planner/calendar?blogId=6728476&openWithPostUuid=-6781590428065772322",
-              "note": "Verified: Metricool ingested the GitHub Pages URL and re-hosted the image. Draft may have been repurposed for later capability tests (see docs/PIPELINE_STATUS.md)."
+              "note": "TEST. Delete in the Metricool planner."
             }
           ]
         },
         {
           "id": "_tests-reel",
           "format": "reel",
-          "concept": "pipeline test reel",
+          "concept": "pipeline test: website scroll-through reel (also used for a YouTube Shorts test)",
           "files": [
             {
-              "path": "media/test_reel.mp4",
-              "url": "https://thewa404.github.io/west-apadana-media/media/test_reel.mp4",
-              "sha256": "1e3ed10ea06180611a284ffb1a65018e669bd7908ba12e4417cb32770984dd16"
+              "path": "media/tests/reel_scroll_test.mp4",
+              "url": "https://thewa404.github.io/west-apadana-media/media/tests/reel_scroll_test.mp4"
+            },
+            {
+              "path": "media/tests/reel_typo_test.mp4",
+              "url": "https://thewa404.github.io/west-apadana-media/media/tests/reel_typo_test.mp4",
+              "role": "alt"
             }
           ],
           "targets": [
@@ -44,206 +55,14 @@
               "network": "instagram",
               "date": "2027-06-01T11:00:00-04:00",
               "status": "draft",
-              "draft_id": "415594581",
+              "draft_id": "415622975",
               "uuid": "4351194295856021551",
               "planner_url": "https://app.metricool.com/planner/calendar?blogId=6728476&openWithPostUuid=4351194295856021551",
-              "note": "Verified: Instagram REEL draft accepted the Pages MP4 URL. Video has no audio (first test file)."
+              "note": "TEST. Delete in the Metricool planner."
             }
           ]
         }
       ]
-    },
-    {
-      "id": "_dryrun",
-      "created": "2026-11-03T13:18:58-05:00",
-      "status": "published-media",
-      "pieces": [
-        {
-          "id": "dr-p01",
-          "format": "reel",
-          "concept": "dryrun typography test",
-          "hook": "dryrun hook alpha",
-          "headline": "dryrun headline alpha",
-          "theme": "obsidian",
-          "source": "typography",
-          "captions": {
-            "instagram": "Dry run of the batch toolkit.",
-            "youtube": "Dry run of the batch toolkit."
-          },
-          "hashtags": {
-            "instagram": [
-              "#test"
-            ]
-          },
-          "titles": {
-            "youtube": "Dry run Shorts title"
-          },
-          "local_files": [
-            "/home/claude/out/_dryrun/dr-p01.mp4"
-          ],
-          "targets": [
-            {
-              "network": "instagram",
-              "date": "2026-11-20T12:00:00-05:00",
-              "status": "planned"
-            },
-            {
-              "network": "youtube",
-              "date": "2026-11-20T16:00:00-05:00",
-              "status": "planned"
-            }
-          ],
-          "files": [
-            {
-              "path": "media/dryrun/dr-p01.mp4",
-              "url": "https://thewa404.github.io/west-apadana-media/media/dryrun/dr-p01.mp4",
-              "sha256": "418a6ab23c8072c89f0d7439f955c61af6cb657ad1e4ffeaa76187aa57107363",
-              "role": "media"
-            }
-          ]
-        },
-        {
-          "id": "dr-p02",
-          "format": "carousel",
-          "concept": "dryrun carousel test",
-          "hook": "dryrun hook bravo",
-          "headline": "dryrun headline bravo",
-          "theme": "navy",
-          "source": "template",
-          "captions": {
-            "instagram": "Dry run carousel.",
-            "facebook": "Dry run carousel."
-          },
-          "hashtags": {
-            "instagram": [
-              "#test"
-            ],
-            "facebook": []
-          },
-          "local_files": [
-            "/home/claude/out/_dryrun/dr-p02_1.jpg",
-            "/home/claude/out/_dryrun/dr-p02_2.jpg",
-            "/home/claude/out/_dryrun/dr-p02_3.jpg"
-          ],
-          "targets": [
-            {
-              "network": "instagram",
-              "date": "2026-11-23T12:00:00-05:00",
-              "status": "planned"
-            },
-            {
-              "network": "facebook",
-              "date": "2026-11-23T10:00:00-05:00",
-              "status": "planned"
-            }
-          ],
-          "files": [
-            {
-              "path": "media/dryrun/dr-p02_1.jpg",
-              "url": "https://thewa404.github.io/west-apadana-media/media/dryrun/dr-p02_1.jpg",
-              "sha256": "b09d683451e07d9b6b0d8cce54536a4339c65d45f9e02aa427ad5ae8b82bb08a",
-              "role": "media"
-            },
-            {
-              "path": "media/dryrun/dr-p02_2.jpg",
-              "url": "https://thewa404.github.io/west-apadana-media/media/dryrun/dr-p02_2.jpg",
-              "sha256": "b8cc8f073db3129e7cfa7c9869f14c5b301087469d57968250fcce419f1fd670",
-              "role": "media"
-            },
-            {
-              "path": "media/dryrun/dr-p02_3.jpg",
-              "url": "https://thewa404.github.io/west-apadana-media/media/dryrun/dr-p02_3.jpg",
-              "sha256": "e1674d141d8705eaeeba58923654da766da3ce4dcee5a93fd8791c4eb284b979",
-              "role": "media"
-            }
-          ]
-        },
-        {
-          "id": "dr-p03",
-          "format": "showcase",
-          "concept": "dryrun showcase test",
-          "hook": "dryrun hook charlie",
-          "headline": "dryrun headline charlie",
-          "theme": "navy",
-          "source": "TORQ - Auto Works",
-          "captions": {
-            "instagram": "Dry run showcase.",
-            "facebook": "Dry run showcase."
-          },
-          "hashtags": {
-            "instagram": [
-              "#test"
-            ],
-            "facebook": []
-          },
-          "local_files": [
-            "/home/claude/out/_dryrun/dr-p03_1.jpg"
-          ],
-          "targets": [
-            {
-              "network": "instagram",
-              "date": "2026-11-26T12:00:00-05:00",
-              "status": "planned"
-            },
-            {
-              "network": "facebook",
-              "date": "2026-11-26T10:00:00-05:00",
-              "status": "planned"
-            }
-          ],
-          "files": [
-            {
-              "path": "media/dryrun/dr-p03_1.jpg",
-              "url": "https://thewa404.github.io/west-apadana-media/media/dryrun/dr-p03_1.jpg",
-              "sha256": "5a13fa1eeb4c9ffa967c8a27f83af237c785139145fcd2d801a40416564decab",
-              "role": "media"
-            }
-          ]
-        },
-        {
-          "id": "dr-p04",
-          "format": "graphic",
-          "concept": "dryrun graphic test",
-          "hook": "dryrun hook delta",
-          "headline": "dryrun headline delta",
-          "theme": "obsidian",
-          "source": "template",
-          "captions": {
-            "instagram": "Dry run graphic.",
-            "facebook": "Dry run graphic."
-          },
-          "hashtags": {
-            "instagram": [
-              "#test"
-            ],
-            "facebook": []
-          },
-          "local_files": [
-            "/home/claude/out/_dryrun/dr-p04_1.jpg"
-          ],
-          "targets": [
-            {
-              "network": "instagram",
-              "date": "2026-11-29T12:00:00-05:00",
-              "status": "planned"
-            },
-            {
-              "network": "facebook",
-              "date": "2026-11-29T10:00:00-05:00",
-              "status": "planned"
-            }
-          ],
-          "files": [
-            {
-              "path": "media/dryrun/dr-p04_1.jpg",
-              "url": "https://thewa404.github.io/west-apadana-media/media/dryrun/dr-p04_1.jpg",
-              "sha256": "23b4aa52ab0b7c58650b51706274a1514f64754b6da003485d4c4e037a6f0233",
-              "role": "media"
-            }
-          ]
-        }
-      ],
-      "pages_ready_after": "2026-11-03T18:21:38+00:00"
     }
   ]
 }

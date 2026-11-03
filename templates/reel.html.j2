@@ -1,0 +1,95 @@
+{% extends "base.html.j2" %}
+{#
+  Animated 9:16 reel. Everything is a pure function of time: window.setT(t) (seconds).
+  beats : list of {t0, t1, text ("*accent* words"), style (headline|kicker|sub|cta), pos (high|mid|low), size}
+  scroll: optional {src, w, h, y0, y1, t0, t1, device (browser|phone)}  -- a REAL screenshot panned inside a device frame
+  theme : obsidian|navy|graphite ; chrome_label ; watermark (bool)
+  Safe zone: Instagram UI covers roughly the top 240px and bottom 340px, keep key content between.
+#}
+{% block theme %}t-{{ theme|default('obsidian') }}{% endblock %}
+{% block css %}
+#bg{position:absolute;inset:-80px;background:inherit;z-index:0;will-change:transform}
+#glow{position:absolute;right:-300px;top:120px;width:980px;height:980px;border-radius:50%;background:radial-gradient(circle,rgba(198,166,106,.26),rgba(198,166,106,0) 65%);z-index:0}
+.hline{position:absolute;left:84px;right:84px;height:2px;background:var(--gold);opacity:.55;transform-origin:left;z-index:1}
+.mark{position:absolute;left:84px;top:96px;font-size:26px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--gold);z-index:3}
+.handle{position:absolute;right:84px;top:96px;font-size:26px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;opacity:.8;z-index:3}
+#stage{position:absolute;left:84px;right:84px;top:240px;bottom:340px;z-index:3}
+.beat{position:absolute;inset:0;display:flex;flex-wrap:wrap;gap:0 .26em;align-content:center}
+.beat.high{align-content:flex-start}.beat.low{align-content:flex-end}
+.w{display:inline-block;overflow:hidden;padding-bottom:.16em;margin-bottom:-.16em}
+.wi{display:inline-block;will-change:transform}
+.beat.headline{font-family:'Inter Display','Inter',sans-serif;font-weight:700;letter-spacing:-.04em;line-height:.98;font-size:132px}
+.beat.kicker{font-weight:700;letter-spacing:.24em;text-transform:uppercase;font-size:34px;color:var(--gold)}
+.beat.sub{font-weight:400;font-size:46px;line-height:1.3}
+.beat.cta{font-family:'Inter Display','Inter',sans-serif;font-weight:700;letter-spacing:-.03em;line-height:1;font-size:96px}
+.beat .acc{color:var(--gold)}
+#dev{position:absolute;left:0;right:0;z-index:2;opacity:0;display:flex;justify-content:center}
+.device{position:relative;border:2px solid rgba(198,166,106,.55);background:#0b0b0b;overflow:hidden;box-shadow:0 70px 120px rgba(0,0,0,.55)}
+.device.browser{width:880px;border-radius:22px}
+.chrome{height:56px;display:flex;align-items:center;gap:12px;padding:0 24px;background:#171717}
+.chrome i{width:14px;height:14px;border-radius:50%;background:#3b3b3b;display:block}
+.chrome span{margin-left:22px;flex:1;height:30px;border-radius:15px;background:#242424;color:#9a9a9a;font-size:18px;display:flex;align-items:center;padding:0 18px;letter-spacing:.04em}
+.screen{position:relative;overflow:hidden;background:#fff}
+.device.browser .screen{width:880px;height:{{ screen_h|default(820) }}px}
+.device.phone{width:430px;border-radius:70px;padding:16px}
+.device.phone .screen{width:398px;height:{{ screen_h|default(860) }}px;border-radius:54px}
+.screen img{position:absolute;left:0;top:0;display:block}
+{% endblock %}
+{% block body %}
+<div id="bg"></div><div id="glow"></div>
+<div class="hline" style="top:176px"></div><div class="hline" style="bottom:300px"></div>
+{% if watermark|default(true) %}<div class="mark">West Apadana</div><div class="handle">{{ handle }}</div>{% endif %}
+<div id="stage"></div>
+{% if scroll %}
+<div id="dev" style="top:{{ scroll.top|default(560) }}px">
+  <div class="device {{ scroll.device|default('browser') }}">
+    {% if scroll.device|default('browser') != 'phone' %}<div class="chrome"><i></i><i></i><i></i><span>{{ chrome_label|default('Concept preview') }}</span></div>{% endif %}
+    <div class="screen"><img id="shot" src="file://{{ scroll.src }}"></div>
+  </div>
+</div>
+{% endif %}
+{% endblock %}
+{% block script %}
+<script>
+const D={{ duration }}, BEATS={{ beats|tojson }}, SCROLL={{ (scroll or none)|tojson }};
+const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const ease=x=>1-Math.pow(1-x,4);
+const easeIO=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const stage=document.getElementById('stage'), els=[];
+BEATS.forEach(b=>{
+  const el=document.createElement('div'); el.className='beat '+(b.style||'headline')+' '+(b.pos||'mid');
+  if(b.size) el.style.fontSize=b.size+'px';
+  b.text.split('*').forEach((seg,i)=>{
+    seg.split(/\s+/).filter(Boolean).forEach(word=>{
+      const w=document.createElement('span'); w.className='w';
+      const wi=document.createElement('span'); wi.className='wi'+(i%2?' acc':''); wi.textContent=word;
+      w.appendChild(wi); el.appendChild(w);
+    });
+  });
+  stage.appendChild(el); els.push(el);
+});
+const bg=document.getElementById('bg'), glow=document.getElementById('glow'), dev=document.getElementById('dev'), shot=document.getElementById('shot');
+window.setT=function(t){
+  bg.style.transform=`scale(${1.03+0.07*t/D}) translateY(${-24*t/D}px)`;
+  glow.style.transform=`translate(${-70*t/D}px,${90*t/D}px)`;
+  document.querySelectorAll('.hline').forEach(l=>l.style.transform=`scaleX(${ease(clamp(t/1.4))})`);
+  BEATS.forEach((b,bi)=>{
+    const el=els[bi], ws=el.querySelectorAll('.wi');
+    const out=clamp((t-(b.t1-0.45))/0.45), vis=(t>=b.t0&&t<b.t1);
+    el.style.opacity=vis?(1-out):0;
+    el.style.transform=`translateY(${-out*26}px)`;
+    ws.forEach((w,i)=>{const p=ease(clamp((t-b.t0-i*0.07)/0.6)); w.style.transform=`translateY(${(1-p)*118}%)`;});
+  });
+  if(SCROLL&&dev){
+    const p=clamp((t-SCROLL.t0)/(SCROLL.t1-SCROLL.t0));
+    const fade=Math.min(ease(clamp((t-SCROLL.t0)/0.7)),1-clamp((t-(SCROLL.t1-0.5))/0.5));
+    dev.style.opacity=Math.max(0,fade);
+    dev.style.transform=`translateY(${(1-ease(clamp((t-SCROLL.t0)/0.9)))*60}px)`;
+    const devW=SCROLL.device==='phone'?398:880;
+    const y=(SCROLL.y0+(SCROLL.y1-SCROLL.y0)*easeIO(p))*devW/SCROLL.w;
+    shot.style.width=devW+'px'; shot.style.transform=`translateY(${-y}px)`;
+  }
+};
+window.setT(0);
+</script>
+{% endblock %}

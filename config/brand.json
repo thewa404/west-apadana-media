@@ -1,0 +1,38 @@
+{
+  "name": "West Apadana",
+  "handle": "@thewestapadana",
+  "tagline": "Premium websites and digital experiences",
+  "colors": {
+    "obsidian": "#101010",
+    "graphite": "#252525",
+    "navy": "#162238",
+    "gold": "#C6A66A",
+    "ivory": "#F2EDE4"
+  },
+  "extra_colors": {
+    "gold_deep": "#84652D"
+  },
+  "extra_colors_note": "gold_deep is a derived darker gold used ONLY for small text/rules on ivory, because the brand gold is too light there to read.",
+  "min_text_contrast": 4.5,
+  "approved_text_pairs": [
+    ["ivory", "obsidian"],
+    ["ivory", "navy"],
+    ["ivory", "graphite"],
+    ["gold", "obsidian"],
+    ["gold", "navy"],
+    ["obsidian", "ivory"],
+    ["gold_deep", "ivory"]
+  ],
+  "fonts": {
+    "display": {
+      "family": "Inter Display",
+      "role": "Headlines. Licensed (OFL) stand-in for Neue Haas Grotesk, which is a commercial font and is not installed. Replace by dropping licensed files in fonts/ and editing this block.",
+      "files": { "500": "InterDisplay-Medium.otf", "600": "InterDisplay-SemiBold.otf", "700": "InterDisplay-Bold.otf" }
+    },
+    "body": {
+      "family": "DM Sans",
+      "role": "Body copy, captions, labels (OFL).",
+      "files": { "400": "DMSans-Regular.ttf", "500": "DMSans-Medium.ttf", "700": "DMSans-Bold.ttf" }
+    }
+  }
+}
