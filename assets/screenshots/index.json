@@ -1,0 +1,19 @@
+{
+  "screenshots": [
+    {
+      "slug": "torq-auto-works",
+      "project_title": "TORQ — Auto Works",
+      "project_id": "5QPtHQCdeU1OtrJNOCDR",
+      "breakpoint": "Desktop",
+      "path": "assets/screenshots/torq-auto-works/desktop.jpg",
+      "size": [
+        1440,
+        12536
+      ],
+      "demo": true,
+      "captured": "2026-11-03T18:18:23+00:00",
+      "source": "Framer exec api.tree.screenshot (real render of the project page; project may be unpublished)",
+      "notes": ""
+    }
+  ]
+}
