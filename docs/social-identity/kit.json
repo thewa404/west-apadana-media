@@ -458,7 +458,7 @@
   }
  },
  "changelog": [
-  "0.2.0 (2026-11-03): recommended bios now lead with lessons and the premium-websites statement; free homepage review is no longer the main message of any profile (short bios carry no offer; long About fields mention optional ways to start after the first paragraph). Options A/B/C are now Premium-minimal / Bold-creative / Education-led authority. The invented monogram directions are removed; the existing approved logo is used and is currently a MISSING ASSET. Previous version kept at git tag kit-v0.1.0.",
+  "0.2.0 (2026-11-03): recommended bios now lead with lessons and the premium-websites statement; free homepage review is no longer the main message of any profile (short bios carry no offer; long About fields mention optional ways to start after the first paragraph). Options A/B/C are now Premium-minimal / Bold-creative / Education-led authority. The invented monogram directions are removed; the existing approved logo is used and is currently a MISSING ASSET. Previous version kept at commit de6e062.",
   "0.1.0 (2026-11-03): first draft."
  ]
 }

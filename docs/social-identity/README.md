@@ -1,6 +1,6 @@
 # West Apadana Social Identity Kit
 
-Version 0.2.0 (draft, 2026-11-03). v0.1.0 is kept at git tag `kit-v0.1.0`. **Status: for owner approval. Nothing in this kit has been applied to any live profile.**
+Version 0.2.0 (draft, 2026-11-03). v0.1.0 is kept at commit `de6e062`. **Status: for owner approval. Nothing in this kit has been applied to any live profile.**
 
 The kit defines how every West Apadana profile presents the studio before the content campaign starts: names, bios, About text, keywords, calls to action, links, images, and the order in which to implement them. It follows the project rules in `CLAUDE.md`: no invented clients, results or credentials; portfolio pieces are always "Concept project, not client work"; offers live on profiles, not inside educational posts.
 
@@ -26,5 +26,5 @@ The kit defines how every West Apadana profile presents the studio before the co
 Character limits come from official X Help and from secondary sources for the other platforms. Where sources disagreed the lower figure was used. Every limit must be confirmed in the live editor at implementation time. Each platform file shows the confidence of every limit.
 
 ## Changelog
-- 0.2.0 (2026-11-03): owner review. Bios lead with lessons and the premium-websites statement; offers are secondary; monogram directions removed; existing approved logo only (missing asset, flagged); option C renamed education-led / authority; new offer-placement lint. Previous version at tag `kit-v0.1.0`.
+- 0.2.0 (2026-11-03): owner review. Bios lead with lessons and the premium-websites statement; offers are secondary; monogram directions removed; existing approved logo only (missing asset, flagged); option C renamed education-led / authority; new offer-placement lint. Previous version at commit `de6e062`.
 - 0.1.0 (2026-11-03): first draft. Seven platforms, three options each, recommended set, plan, capability audit, decisions.
